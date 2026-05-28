@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-base'; // Siguraduhing tama ang import ng supabase client mo rito
+import { createClient } from '@supabase/supabase-js';
 
 // Kunin ang iyong Supabase credentials (dapat naka-set ito sa Vercel Environment Variables)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
