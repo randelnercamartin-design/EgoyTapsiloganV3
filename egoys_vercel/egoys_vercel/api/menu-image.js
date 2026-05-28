@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     }
 
     // 1. I-convert ang Base64 string pabalik sa Buffer para ma-upload sa Storage
-    const buffer = Buffer.from(base64Image.replace(/^data:image\/\w+;base64,/, ""), 'base64');
+    const buffer = Buffer.from(base64Image..replace(/^data:image\/\w+;base64,/, ""), 'base64');
     const fileType = base64Image.split(';')[0].split('/')[1];
     const uniqueFileName = `menu_${Date.now()}.${fileType}`;
 
