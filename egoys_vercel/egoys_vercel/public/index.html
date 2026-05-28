@@ -34,8 +34,6 @@ img{max-width:100%;display:block}
 ::-webkit-scrollbar-track{background:var(--black2)}
 ::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px}
 
-/* ===== BACKGROUND DESIGN ELEMENTS ===== */
-/* Subtle repeating pattern aligned to red/black color scheme */
 body::before {
   content:'';
   position:fixed;
@@ -48,7 +46,6 @@ body::before {
     radial-gradient(circle at 50% 50%, rgba(251,191,36,0.03) 0%, transparent 60%);
   background-size: 100% 100%;
 }
-/* Diagonal line texture overlay */
 body::after {
   content:'';
   position:fixed;
@@ -65,11 +62,9 @@ body::after {
 }
 nav, .page, footer { position: relative; z-index: 1; }
 
-/* PAGE SYSTEM */
 .page{display:none;min-height:100vh;padding-top:72px}
 .page.active{display:block}
 
-/* ===== NAVIGATION ===== */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center}
 .nav-inner{max-width:1280px;margin:0 auto;width:100%;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .nav-logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;color:var(--text);white-space:nowrap;letter-spacing:-0.3px}
@@ -100,7 +95,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba
 .mobile-menu a{padding:14px 16px;border-radius:var(--r-sm);font-weight:600;font-size:17px;color:var(--text2);transition:all 0.2s}
 .mobile-menu a:hover,.mobile-menu a.active{background:var(--gray);color:var(--yellow)}
 
-/* LAYOUT */
 .container{max-width:1280px;margin:0 auto;padding:0 24px}
 .section{padding:72px 0}
 .section-sm{padding:48px 0}
@@ -111,14 +105,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba
 .section-title .yellow{color:var(--yellow)}
 .section-sub{color:var(--text2);font-size:18px;margin-bottom:40px;max-width:600px}
 
-/* ===== HOME: HERO ===== */
 .hero{position:relative;overflow:hidden;background:var(--black);padding:80px 0 64px}
 .hero::before{content:'';position:absolute;inset:0;background:
   radial-gradient(ellipse 70% 60% at 75% 50%,rgba(220,38,38,0.15) 0%,transparent 70%),
   radial-gradient(ellipse 50% 50% at 10% 80%,rgba(251,191,36,0.07) 0%,transparent 60%),
   radial-gradient(circle at 50% 0%, rgba(220,38,38,0.08) 0%, transparent 50%);
   pointer-events:none}
-/* Decorative food pattern bg on hero */
 .hero::after{content:'🍲🍳🥩🍚🥣';position:absolute;top:0;right:0;font-size:120px;opacity:0.03;line-height:1.2;pointer-events:none;transform:rotate(-15deg);letter-spacing:10px;white-space:nowrap;overflow:hidden;max-width:60%}
 .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;position:relative;z-index:1}
 .hero-eyebrow{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:18px}
@@ -148,17 +140,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba
 .hero-item-desc{font-size:12px;color:var(--text3);margin-top:1px}
 .hero-item-price{font-weight:900;font-size:17px;color:var(--yellow);white-space:nowrap;margin-left:auto}
 
-/* SECTION BACKGROUNDS — aligned to color scheme */
 .section-alt{background:linear-gradient(180deg, var(--black) 0%, var(--black2) 50%, var(--black) 100%)}
 .section-red-accent{position:relative;overflow:hidden}
 .section-red-accent::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(220,38,38,0.05) 0%,transparent 70%);pointer-events:none}
 
-/* Decorative corner accents */
 .corner-accent{position:absolute;width:200px;height:200px;border-radius:50%;opacity:0.06;pointer-events:none}
 .corner-accent.tl{top:-80px;left:-80px;background:var(--red)}
 .corner-accent.br{bottom:-80px;right:-80px;background:var(--yellow)}
 
-/* CHARTS */
 .charts-wrap{background:var(--black2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .charts-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}
 .chart-card{background:var(--black3);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px}
@@ -167,7 +156,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba
 .chart-sub{font-size:13px;color:var(--text4);margin-bottom:18px}
 .chart-wrap{position:relative;height:210px}
 
-/* BESTSELLERS */
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
 .food-card{background:var(--black2);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all 0.25s;cursor:pointer}
 .food-card:hover{border-color:var(--red);transform:translateY(-5px);box-shadow:var(--shadow)}
@@ -182,16 +170,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba
 .add-btn{width:40px;height:40px;border-radius:var(--r-sm);background:var(--red);color:#fff;border:none;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;flex-shrink:0}
 .add-btn:hover{background:var(--red-dark);transform:scale(1.1);box-shadow:var(--shadow-red)}
 
-/* DELIVERY BANNER */
 .del-banner{background:linear-gradient(135deg,var(--red) 0%,#7F1D1D 100%);border-radius:var(--r-xl);padding:40px 44px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden}
 .del-banner::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 30px,rgba(255,255,255,0.02) 30px,rgba(255,255,255,0.02) 31px)}
 .del-banner h2{font-size:26px;font-weight:800;margin-bottom:6px;letter-spacing:-0.3px}
 .del-banner p{font-size:17px;opacity:0.9}
 .del-pills{display:flex;gap:12px;flex-wrap:wrap}
-.del-pill{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);padding:10px 16px;border-radius:var(--r-sm);font-weight:600;font-size:15px;backdrop-filter:blur(4px)}
+.del-pills .del-pill{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);padding:10px 16px;border-radius:var(--r-sm);font-weight:600;font-size:15px;backdrop-filter:blur(4px)}
 .del-pill i{color:var(--yellow);font-size:16px}
 
-/* ===== ABOUT ===== */
 .about-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .about-photo{background:var(--black2);border:2px solid var(--border);border-radius:var(--r-xl);height:400px;display:flex;align-items:center;justify-content:center;font-size:80px;position:relative;overflow:hidden}
 .about-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 60%,rgba(220,38,38,0.18),transparent 70%)}
@@ -216,7 +202,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba
 .tl-year{font-size:13px;font-weight:800;color:var(--yellow);letter-spacing:0.5px;text-transform:uppercase;margin-bottom:3px}
 .tl-text{font-size:15px;color:var(--text2);line-height:1.6}
 
-/* ===== SERVICES ===== */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
 .svc-card{background:var(--black2);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px;transition:all 0.25s;position:relative;overflow:hidden}
 .svc-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent);opacity:0;transition:opacity 0.3s}
@@ -235,7 +220,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba
 .hours-time{color:var(--text3);font-size:15px}
 .hours-status{padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;background:rgba(34,197,94,0.12);color:#4ADE80}
 
-/* ===== MENU ===== */
 .menu-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
 .f-btn{padding:10px 20px;border-radius:20px;font-size:14px;font-weight:700;border:1.5px solid var(--border);background:transparent;color:var(--text3);transition:all 0.2s;cursor:pointer}
 .f-btn:hover{border-color:var(--red);color:var(--red-light)}
@@ -245,6 +229,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba
 .menu-card:hover{border-color:var(--red);transform:translateY(-3px)}
 .menu-card-img{height:156px;background:var(--black3);display:flex;align-items:center;justify-content:center;font-size:56px;position:relative;overflow:hidden;transition:transform 0.3s}
 .menu-card:hover .menu-card-img{transform:scale(1.06)}
+.menu-card-img img{width:100%;height:100%;object-fit:cover}
 .menu-cat-badge{position:absolute;top:10px;right:10px;background:rgba(0,0,0,0.7);color:var(--text3);font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;border:1px solid var(--border);text-transform:uppercase;letter-spacing:0.5px;backdrop-filter:blur(4px)}
 .menu-best-badge{position:absolute;top:10px;left:10px;background:var(--yellow);color:var(--black);font-size:10px;font-weight:800;padding:3px 8px;border-radius:20px;text-transform:uppercase}
 .menu-card-body{padding:16px}
@@ -257,7 +242,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba
 .qty-btn:hover{background:var(--red)}
 .qty-num{font-weight:700;font-size:15px;min-width:18px;text-align:center}
 
-/* ===== CART SIDEBAR ===== */
 .cart-overlay{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,0.75);display:none;align-items:stretch;justify-content:flex-end}
 .cart-overlay.open{display:flex}
 .cart-panel{width:420px;max-width:100vw;background:var(--black2);display:flex;flex-direction:column;border-left:1px solid var(--border);animation:sideIn 0.3s ease}
@@ -281,7 +265,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;background:rgba
 .cart-total{display:flex;justify-content:space-between;font-size:21px;font-weight:900;margin-bottom:16px}
 .cart-total span:last-child{color:var(--yellow)}
 
-/* ===== CHECKOUT ===== */
 .checkout-grid{display:grid;grid-template-columns:1fr 370px;gap:28px;align-items:start}
 .form-section{background:var(--black2);border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;margin-bottom:20px}
 .form-section-title{font-size:18px;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:9px;color:var(--text)}
@@ -316,7 +299,6 @@ select.fi{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns=
 .osm-total{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin-top:10px;padding-top:12px;border-top:2px solid var(--border)}
 .osm-total span:last-child{color:var(--yellow)}
 
-/* QR MODAL */
 .modal-overlay{position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,0.88);display:none;align-items:center;justify-content:center;padding:20px}
 .modal-overlay.open{display:flex}
 .modal{background:var(--black2);border:1px solid var(--border);border-radius:var(--r-xl);max-width:420px;width:100%;animation:modalPop 0.28s ease}
@@ -332,7 +314,6 @@ select.fi{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns=
 .qr-timer span{color:var(--text2);font-weight:700}
 .sim-btn-wrap{display:flex;gap:10px;justify-content:center}
 
-/* CONFIRM */
 .confirm-page{text-align:center;padding:72px 24px}
 .confirm-icon{width:96px;height:96px;border-radius:50%;background:rgba(34,197,94,0.12);border:2px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;font-size:44px;margin:0 auto 22px;animation:popIn 0.5s ease}
 @keyframes popIn{0%{transform:scale(0)}70%{transform:scale(1.08)}100%{transform:scale(1)}}
@@ -343,7 +324,6 @@ select.fi{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns=
 .confirm-eta{display:inline-flex;align-items:center;gap:10px;background:var(--black2);border:1px solid var(--border);border-radius:var(--r);padding:14px 22px;font-size:17px;font-weight:700;margin-bottom:32px}
 .confirm-eta i{color:var(--yellow)}
 
-/* ===== AUTH ===== */
 .auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:100px 24px 40px;background:radial-gradient(ellipse 60% 50% at 50% 30%,rgba(220,38,38,0.1),transparent 70%)}
 .auth-card{background:var(--black2);border:1px solid var(--border);border-radius:var(--r-xl);padding:38px;width:100%;max-width:440px}
 .auth-logo{text-align:center;margin-bottom:28px}
@@ -370,7 +350,6 @@ select.fi{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns=
 .divider-or{display:flex;align-items:center;gap:10px;margin:16px 0;color:var(--text4);font-size:13px}
 .divider-or::before,.divider-or::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* ===== CONTACT ===== */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .map-box{background:var(--black2);border:1px solid var(--border);border-radius:var(--r-lg);height:360px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .map-placeholder{text-align:center;color:var(--text4);z-index:1}
@@ -390,1571 +369,1363 @@ select.fi{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns=
 .soc-link i{font-size:18px;color:var(--red)}
 .contact-form{background:var(--black2);border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;margin-top:28px}
 
-/* ===== ADMIN ===== */
-.admin-topbar{background:rgba(220,38,38,0.12);border-bottom:1px solid rgba(220,38,38,0.25);padding:10px 0;position:sticky;top:72px;z-index:100}
+.admin-topbar{background:rgba(220,38,38,0.12);border-bottom:1px solid rgba(220,38,38,0.25);padding:10px 0;position:sticky;top:72px;z-index:100;display:none}
 .admin-tb-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.admin-badge-pill{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--red-light)}
-.admin-badge-pill i{font-size:15px}
-.admin-panel{background:var(--black2);border:1px solid rgba(220,38,38,0.2);border-radius:var(--r-lg);padding:22px;margin-bottom:22px}
-.admin-panel-title{font-size:17px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;color:var(--red-light)}
-.admin-table{width:100%;border-collapse:collapse}
-.admin-table th{text-align:left;padding:9px 12px;background:var(--black3);color:var(--text4);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
-.admin-table td{padding:11px 12px;border-bottom:1px solid var(--border);font-size:14px;vertical-align:middle}
-.admin-table tr:hover td{background:var(--black3)}
-.edit-field{background:var(--black3);border:1.5px solid var(--red-dark);border-radius:6px;padding:6px 10px;color:var(--text);font-size:13px;font-family:inherit;width:100%;outline:none}
-.edit-field:focus{border-color:var(--red)}
-.img-upload-box{width:60px;height:60px;border-radius:var(--r-sm);background:var(--black3);border:2px dashed var(--border);display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;overflow:hidden;position:relative;flex-shrink:0}
-.img-upload-box:hover{border-color:var(--red)}
-.img-upload-box input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
-.img-upload-box img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)}
-.action-btns{display:flex;gap:6px;flex-wrap:wrap}
+.admin-badge{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:4px 10px;border-radius:4px;text-transform:uppercase;letter-spacing:0.5px}
+.admin-nav{display:flex;gap:4px}
+.admin-nav-btn{background:transparent;color:var(--text3);border:none;padding:6px 12px;border-radius:4px;font-size:14px;font-weight:600;transition:all 0.2s}
+.admin-nav-btn:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+.admin-nav-btn.active{color:var(--yellow);background:rgba(251,191,36,0.1)}
+.adm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-bottom:24px}
+.adm-stat{background:var(--black2);border:1px solid var(--border);border-radius:var(--r);padding:16px;display:flex;align-items:center;gap:14px}
+.adm-stat-icon{width:44px;height:44px;border-radius:var(--r-sm);background:var(--gray);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text3)}
+.adm-stat-icon.red{color:var(--red);background:var(--red-dim)}
+.adm-stat-icon.yellow{color:var(--yellow);background:var(--yellow-dim)}
+.adm-stat-num{font-size:24px;font-weight:900;line-height:1.1;letter-spacing:-0.5px}
+.adm-stat-lbl{font-size:12px;color:var(--text4);margin-top:2px}
+.adm-panel{background:var(--black2);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;margin-bottom:24px;display:none}
+.adm-panel.active{display:block}
+.adm-panel-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.adm-panel-title{font-size:18px;font-weight:800}
+.tbl-wrap{width:100%;overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;text-align:left;font-size:15px}
+.tbl th{padding:12px;border-bottom:2px solid var(--border);color:var(--text4);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.5px}
+.tbl td{padding:12px;border-bottom:1px solid var(--border);vertical-align:middle}
+.tbl tr:last-child td{border-bottom:none}
+.img-upload-box{width:40px;height:40px;background:var(--black3);border:1.5px dashed var(--border2);border-radius:6px;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;transition:all 0.2s}
+.img-upload-box:hover{border-color:var(--red);background:var(--black4)}
+.img-upload-box img{width:100%;height:100%;object-fit:cover}
+.ord-status{display:inline-flex;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:800;text-transform:uppercase}
+.ord-status.pending{background:var(--yellow-dim);color:var(--yellow)}
+.ord-status.preparing{background:rgba(59,130,246,0.12);color:#60A5FA}
+.ord-status.delivered{background:rgba(34,197,94,0.12);color:#4ADE80}
+.ord-status.cancelled{background:rgba(239,68,68,0.12);color:#F87171}
 
-/* PROFILE */
-.profile-grid{display:grid;grid-template-columns:260px 1fr;gap:22px;align-items:start}
-.profile-card{background:var(--black2);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;text-align:center;position:sticky;top:88px}
-.profile-av{width:72px;height:72px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;margin:0 auto 10px;box-shadow:var(--shadow-red)}
-.profile-name{font-size:18px;font-weight:700}
-.profile-role{font-size:13px;color:var(--text4);margin-bottom:16px}
-.profile-nav{display:flex;flex-direction:column;gap:3px;margin-top:16px;text-align:left}
-.pnav-item{padding:10px 12px;border-radius:var(--r-sm);font-size:15px;font-weight:600;color:var(--text2);cursor:pointer;display:flex;align-items:center;gap:8px;border:none;background:transparent;width:100%;text-align:left;transition:all 0.2s}
-.pnav-item:hover,.pnav-item.active{background:var(--gray);color:var(--text)}
-.pnav-item.active{color:var(--yellow)}
-.order-hist-card{background:var(--black2);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;margin-bottom:12px;transition:border-color 0.2s}
-.order-hist-card:hover{border-color:var(--red)}
-.ohc-hd{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
-.oh-id{font-size:12px;color:var(--text4);font-family:monospace;letter-spacing:1px}
-.oh-status{padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700}
-.oh-status.delivered{background:rgba(34,197,94,0.12);color:#4ADE80}
-.oh-status.processing{background:var(--yellow-dim);color:var(--yellow)}
-.oh-items{font-size:14px;color:var(--text2);margin-bottom:7px}
-.oh-total{display:flex;justify-content:space-between;font-weight:700;padding-top:8px;border-top:1px solid var(--border);font-size:14px}
-
-/* LOADING STATE */
-.loading-spin{display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:spin 0.7s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-
-/* TOAST */
-.toast{position:fixed;bottom:22px;right:22px;z-index:5000;background:var(--black2);border:1px solid var(--border);border-radius:var(--r);padding:13px 18px;display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;transform:translateY(100px);opacity:0;transition:all 0.3s ease;max-width:320px;box-shadow:var(--shadow)}
+.toast{position:fixed;bottom:24px;left:24px;z-index:4000;background:var(--black2);border:1px solid var(--border);padding:14px 20px;border-radius:var(--r);box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;transform:translateY(100px);opacity:0;transition:all 0.3s cubic-bezier(0.175,0.885,0.32,1.275);pointer-events:none}
 .toast.show{transform:translateY(0);opacity:1}
-.toast-icon{font-size:18px;flex-shrink:0}
+.toast-icon{font-size:20px}
+.toast-msg{font-size:14px;font-weight:600;color:var(--text2)}
 
-/* ===== FOOTER ===== */
-footer{background:var(--black2);border-top:1px solid var(--border);padding:52px 0 24px;margin-top:0;position:relative;overflow:hidden}
-footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent)}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
-.footer-brand h3{font-size:20px;font-weight:900;margin-bottom:6px;letter-spacing:-0.3px}
-.footer-brand h3 span{color:var(--red)}
-.footer-brand p{font-size:14px;color:var(--text4);line-height:1.65;margin-bottom:14px}
-.footer-pill{display:inline-flex;align-items:center;gap:6px;background:var(--yellow-dim);color:var(--yellow);border:1px solid rgba(251,191,36,0.25);padding:5px 13px;border-radius:20px;font-size:13px;font-weight:700}
-.footer-col h4{font-size:14px;font-weight:800;margin-bottom:14px;color:var(--text);text-transform:uppercase;letter-spacing:0.5px}
-.footer-links{display:flex;flex-direction:column;gap:8px}
-.footer-links a{font-size:14px;color:var(--text4);transition:color 0.2s}
-.footer-links a:hover{color:var(--red)}
-.footer-bottom{padding-top:22px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.footer-bottom p{font-size:13px;color:var(--text4)}
-.footer-bottom .hl{color:var(--red)}
+footer{background:var(--black2);border-top:1px solid var(--border);padding:48px 0 32px;color:var(--text3);font-size:15px}
+.footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:40px;margin-bottom:48px}
+.footer-logo{font-weight:900;font-size:21px;color:#fff;margin-bottom:14px}
+.footer-logo span{color:var(--red)}
+.footer-desc{line-height:1.6;max-width:320px}
+.footer-hd{color:#fff;font-weight:700;font-size:16px;margin-bottom:16px;text-transform:uppercase;letter-spacing:0.5px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a:hover{color:var(--yellow)}
+.footer-btm{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--text4)}
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:1100px){
-  .charts-grid{grid-template-columns:1fr 1fr}
-  .chart-card.span2{grid-column:auto}
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .about-hero-grid{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .checkout-grid{grid-template-columns:1fr}
-  .profile-grid{grid-template-columns:1fr}
-  .profile-card{position:static}
-  .mission-grid{grid-template-columns:1fr}
+@media(max-width:1024px){
+  .hero-grid,.about-hero-grid,.checkout-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .hero{text-align:center;padding:48px 0}
+  .hero-eyebrow{justify-content:center}
+  .hero-desc{margin-left:auto;margin-right:auto}
+  .hero-ctas,.hero-stats{justify-content:center}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
 }
-@media(max-width:768px){
-  body{font-size:16px}
-  .section{padding:48px 0}
+@media(max-width:768px) {
   .nav-links{display:none}
   .hamburger{display:flex}
-  .hero-grid{grid-template-columns:1fr}
+  .charts-grid{grid-template-columns:1fr;gap:16px}
+  .chart-card.span2{grid-column:auto}
+  .del-banner{padding:28px;text-align:center;justify-content:center}
+  .del-pills{justify-content:center}
   .footer-grid{grid-template-columns:1fr}
-  .cart-panel{width:100vw}
-  .form-row{grid-template-columns:1fr}
-  .pay-grid{grid-template-columns:repeat(3,1fr)}
-  .charts-grid{grid-template-columns:1fr}
-  .about-photo{height:280px}
-  .del-banner{flex-direction:column;text-align:center}
-}
-@media(max-width:480px){
-  .container{padding:0 14px}
-  .hero-ctas{flex-direction:column}
-  .hero-stats{gap:18px}
-  .ot-grid{grid-template-columns:1fr 1fr}
-  .order-sum-card{display:none}
 }
 </style>
 </head>
 <body>
 
-<!-- ====== NAVIGATION ====== -->
+<div class="admin-topbar" id="adminTopbar">
+  <div class="admin-tb-inner">
+    <div style="display:flex;align-items:center;gap:10px">
+      <span class="admin-badge">Admin Mode</span>
+      <span style="font-size:13px;color:var(--text3)" id="adminSessionLabel">Egoy's Dashboard</span>
+    </div>
+    <div class="admin-nav">
+      <button class="admin-nav-btn active" onclick="switchAdminPanel('orders', this)"><i class="fas fa-shopping-bag"></i> Orders</button>
+      <button class="admin-nav-btn" onclick="switchAdminPanel('menu', this)"><i class="fas fa-utensils"></i> Edit Menu</button>
+      <button class="admin-nav-btn" onclick="switchAdminPanel('config', this)"><i class="fas fa-cogs"></i> Config</button>
+    </div>
+  </div>
+</div>
+
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="#" onclick="nav('home')">
-      🍲 <span class="red">Egoy's</span>&nbsp;Tapsihan
-      <span class="badge-24">24/7</span>
+    <a href="#" class="nav-logo" onclick="navigateTo('home')">
+      EGOY'S <span class="red">TAPSIHAN</span> <span class="badge-24">24/7</span>
     </a>
     <div class="nav-links" id="navLinks">
-      <a href="#" onclick="nav('home')" id="nl-home" class="active">Home</a>
-      <a href="#" onclick="nav('about')" id="nl-about">About</a>
-      <a href="#" onclick="nav('services')" id="nl-services">Services</a>
-      <a href="#" onclick="nav('menu')" id="nl-menu">Menu</a>
-      <a href="#" onclick="nav('order')" id="nl-order">Order</a>
-      <a href="#" onclick="nav('contact')" id="nl-contact">Contact</a>
+      <a href="#" class="active" onclick="navigateTo('home', this)">Home</a>
+      <a href="#" onclick="navigateTo('menu', this)">Menu</a>
+      <a href="#" onclick="navigateTo('services', this)">Services</a>
+      <a href="#" onclick="navigateTo('about', this)">About</a>
+      <a href="#" onclick="navigateTo('contact', this)">Contact</a>
     </div>
     <div class="nav-actions">
-      <button class="btn-icon" onclick="toggleCart()" title="Cart">
+      <button class="btn-icon" onclick="toggleCart()" title="View Cart">
         <i class="fas fa-shopping-cart"></i>
-        <span class="cart-badge" id="cartBadge">0</span>
+        <div class="cart-badge" id="cartBadge">0</div>
       </button>
-      <button class="btn btn-sm btn-primary" id="authBtn" onclick="handleAuth()">
-        <i class="fas fa-user" id="authIcon"></i>
-        <span id="authTxt">Login</span>
+      <button class="btn btn-secondary btn-sm" id="authBtn" onclick="navigateTo('auth')">
+        <i class="fas fa-user"></i> <span>Sign In</span>
       </button>
-      <button class="hamburger" onclick="toggleMobile()"><i class="fas fa-bars"></i></button>
+      <button class="hamburger" onclick="toggleMobileMenu()" title="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#" onclick="nav('home');closeMobile()">🏠 Home</a>
-  <a href="#" onclick="nav('about');closeMobile()">ℹ️ About</a>
-  <a href="#" onclick="nav('services');closeMobile()">🛎️ Services</a>
-  <a href="#" onclick="nav('menu');closeMobile()">🍽️ Menu</a>
-  <a href="#" onclick="nav('order');closeMobile()">🛒 Order</a>
-  <a href="#" onclick="nav('contact');closeMobile()">📞 Contact</a>
+  <a href="#" class="active" onclick="navigateTo('home', this); toggleMobileMenu()">Home</a>
+  <a href="#" onclick="navigateTo('menu', this); toggleMobileMenu()">Menu</a>
+  <a href="#" onclick="navigateTo('services', this); toggleMobileMenu()">Services</a>
+  <a href="#" onclick="navigateTo('about', this); toggleMobileMenu()">About</a>
+  <a href="#" onclick="navigateTo('contact', this); toggleMobileMenu()">Contact</a>
 </div>
 
-<!-- ===================== HOME ===================== -->
-<div class="page active" id="page-home">
-
-  <!-- Admin Bar -->
-  <div class="admin-topbar" id="adminTopbar" style="display:none">
-    <div class="admin-tb-inner">
-      <div class="admin-badge-pill"><i class="fas fa-shield-alt"></i> Admin Mode — Egoy's Control Panel</div>
-      <button class="btn btn-sm btn-primary" onclick="nav('admin')">⚙️ Manage Content</button>
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <section class="hero">
+<div id="page-home" class="page active">
+  <div class="hero">
     <div class="container">
       <div class="hero-grid">
         <div>
-          <div class="hero-eyebrow">Open 24 Hours, 7 Days a Week</div>
-          <h1 class="hero-title">
-            <span class="r">Egoy's</span><br>
-            Tapsihan<br>
-            <span class="y">Lugawan</span>
-          </h1>
-          <p class="hero-desc">Authentic Filipino tapsilog at affordable prices. Dine-in, take-out, or delivery — we're here even at 3AM.</p>
+          <div class="hero-eyebrow">Dito sa Egoy's, Solb Ka Palagi</div>
+          <h1 class="hero-title">Lugawan at <span class="r">Tapsihan</span> Paborito ng <span class="y">Bayan.</span></h1>
+          <p class="hero-desc">Bukas 24 oras para sa iyong matinding cravings. Tikman ang sikat naming unlimited lugaw at nag-uumapaw na tapsilog meals sa presyong abot-kaya.</p>
           <div class="hero-ctas">
-            <button class="btn btn-primary btn-lg" onclick="nav('menu')"><i class="fas fa-utensils"></i> Order Now</button>
-            <button class="btn btn-outline btn-lg" onclick="nav('about')">Our Story</button>
+            <button class="btn btn-primary btn-lg" onclick="navigateTo('menu')">Order Online Now <i class="fas fa-arrow-right"></i></button>
+            <button class="btn btn-outline btn-lg" onclick="navigateTo('about')">Our Story</button>
           </div>
           <div class="hero-stats">
-            <div class="hero-stat"><div class="num">500+</div><div class="lbl">Daily Orders</div></div>
-            <div class="hero-stat"><div class="num">₱49</div><div class="lbl">Starts From</div></div>
-            <div class="hero-stat"><div class="num">4.9★</div><div class="lbl">Rating</div></div>
-            <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Always Open</div></div>
+            <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Bukas Palagi</div></div>
+            <div class="hero-stat"><div class="num">15 Min</div><div class="lbl">Average Delivery</div></div>
+            <div class="hero-stat"><div class="num">4.9 ★</div><div class="lbl">Over 10k Reviews</div></div>
           </div>
         </div>
         <div class="hero-visual">
           <div class="hero-card">
             <div class="hero-card-hd">
-              <div class="hero-card-icon">🍲</div>
+              <div class="hero-card-icon">🍳</div>
               <div>
-                <div class="hero-card-title">Today's Best Sellers</div>
-                <div class="live-badge"><div class="pulse-dot"></div> Live Orders</div>
+                <div class="hero-card-title">Live Ordering Status</div>
+                <div class="live-badge"><div class="pulse-dot"></div> 42 Kitchen Orders Active</div>
               </div>
             </div>
-            <div class="hero-items" id="heroItems"></div>
+            <div class="hero-items" id="heroItemsBody">
+              </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- CHARTS — Admin Only -->
-  <section class="section-sm charts-wrap" id="dashboardSection" style="display:none">
-    <div class="container">
-      <div class="tag"><i class="fas fa-chart-line"></i> Business Insights</div>
-      <h2 class="section-title">Sales <span>Dashboard</span></h2>
-      <p class="section-sub">Real-time performance metrics</p>
+  <div class="charts-wrap">
+    <div class="container section-xs">
       <div class="charts-grid">
         <div class="chart-card span2">
-          <div class="chart-label">Weekly Orders Trend</div>
-          <div class="chart-sub">Mon–Sun order volume</div>
-          <div class="chart-wrap"><canvas id="lineChart"></canvas></div>
+          <div class="chart-label">Sales & Orders Volume</div>
+          <div class="chart-sub">Real-time daily transactions tracker</div>
+          <div class="chart-wrap"><canvas id="salesChart"></canvas></div>
         </div>
         <div class="chart-card">
-          <div class="chart-label">Top Sellers</div>
-          <div class="chart-sub">Units sold this week</div>
-          <div class="chart-wrap"><canvas id="barChart"></canvas></div>
+          <div class="chart-label">Popular Categories</div>
+          <div class="chart-sub">Distribution of item sales</div>
+          <div class="chart-wrap"><canvas id="categoryChart"></canvas></div>
         </div>
         <div class="chart-card">
-          <div class="chart-label">Sales by Category</div>
-          <div class="chart-sub">Revenue share</div>
-          <div class="chart-wrap"><canvas id="pieChart"></canvas></div>
+          <div class="chart-label">Peak Hours</div>
+          <div class="chart-sub">Busy operational intervals</div>
+          <div class="chart-wrap"><canvas id="peakChart"></canvas></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- BEST SELLERS -->
-  <section class="section section-alt">
-    <div class="container" style="position:relative">
-      <div class="corner-accent tl"></div>
-      <div class="corner-accent br"></div>
-      <div class="tag"><i class="fas fa-fire"></i> Most Ordered</div>
-      <h2 class="section-title">Best <span>Sellers</span></h2>
-      <p class="section-sub">Our most loved dishes, ordered by hundreds daily</p>
-      <div class="cards-grid" id="bestSellers"></div>
-    </div>
-  </section>
-
-  <!-- DELIVERY BANNER -->
-  <section class="section-xs">
+  <div class="section section-alt">
     <div class="container">
-      <div class="del-banner">
-        <div>
-          <h2>🚀 Fast Delivery, Anytime!</h2>
-          <p>We deliver to all nearby barangays — GCash or Maya accepted</p>
+      <div class="tag">🔥 Sikat na Putahe</div>
+      <h2 class="section-title">Our Best <span>Sellers</span></h2>
+      <p class="section-sub">Ang mga walang-kamatayang putahe na balik-balikan ng mga suki.</p>
+      <div class="cards-grid" id="bestSellersBody">
         </div>
-        <div class="del-pills">
-          <div class="del-pill"><i class="fas fa-clock"></i> 30–45 min ETA</div>
-          <div class="del-pill"><i class="fas fa-motorcycle"></i> Free for ₱250+</div>
-          <div class="del-pill"><i class="fas fa-map-marker-alt"></i> 5km radius</div>
-        </div>
-        <button class="btn btn-yellow btn-lg" onclick="nav('menu')">Order for Delivery</button>
+    </div>
+  </div>
+
+  <div class="container section-sm">
+    <div class="del-banner">
+      <div>
+        <h2>Mabilis at Mainit na Delivery</h2>
+        <p>Garantisadong bagong luto at mainit ang iyong pagkain pagdating sa iyong pintuan.</p>
+      </div>
+      <div class="del-pills">
+        <div class="del-pill"><i class="fas fa-motorcycle"></i> In-House Riders</div>
+        <div class="del-pill"><i class="fas fa-shield-alt"></i> Sealed Packaging</div>
+        <div class="del-pill"><i class="fas fa-map-marker-alt"></i> Realtime Track</div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 
-<!-- ===================== ABOUT ===================== -->
-<div class="page" id="page-about">
-  <section class="section section-red-accent">
-    <div class="container">
-      <div class="about-hero-grid">
-        <div>
-          <div class="tag"><i class="fas fa-store"></i> Our Story</div>
-          <h1 class="section-title">The Story Behind <span>Egoy's</span></h1>
-          <p style="font-size:18px;color:var(--text2);line-height:1.75;margin-bottom:18px">What started as a small <em>turo-turo</em> in Quezon City has grown into one of the most beloved tapsilogan in the area. Founded by <strong style="color:var(--text)">Aldrin "Egoy" Perez</strong>, we serve over 500 orders daily.</p>
-          <p style="font-size:17px;color:var(--text2);line-height:1.75">We started with just three silog meals and a dream to feed the neighborhood at any hour. Now — 24 hours, 7 days a week — we're still here.</p>
-          <div class="stat-grid">
-            <div class="stat-card"><div class="num">2023</div><div class="lbl">Year Founded</div></div>
-            <div class="stat-card"><div class="num">500+</div><div class="lbl">Daily Orders</div></div>
-            <div class="stat-card"><div class="num">8</div><div class="lbl">Menu Items</div></div>
-            <div class="stat-card"><div class="num">4.9★</div><div class="lbl">Rating</div></div>
-          </div>
-        </div>
-        <div>
-          <div class="about-photo">👨‍🍳<span class="about-photo-label">Aldrin "Egoy" Perez — Founder & Owner</span></div>
-        </div>
-      </div>
+<div id="page-menu" class="page">
+  <div class="container section-sm">
+    <div class="tag">🍽️ Aming Menu</div>
+    <h2 class="section-title">Pumili at <span>Mag-Order</span></h2>
+    <p class="section-sub">Lahat ng luto namin ay gawa sa sariwang sangkap at may kasamang pagmamahal.</p>
+    
+    <div class="menu-filters" id="menuFilters">
+      <button class="f-btn active" onclick="filterMenu('all', this)">All Items</button>
+      <button class="f-btn" onclick="filterMenu('bestseller', this)">⭐ Best Sellers</button>
+      <button class="f-btn" onclick="filterMenu('tapsilog', this)">🍳 Tapsilog Meals</button>
+      <button class="f-btn" onclick="filterMenu('lugaw', this)">🍚 Lugaw & Gotox</button>
+      <button class="f-btn" onclick="filterMenu('addon', this)">➕ Extra Add-ons</button>
     </div>
-  </section>
-  <section class="section" style="background:var(--black2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-    <div class="container">
-      <div class="tag"><i class="fas fa-bullseye"></i> Who We Are</div>
-      <h2 class="section-title">Mission & <span>Vision</span></h2>
-      <div class="mission-grid">
-        <div class="m-card"><div class="m-icon"><i class="fas fa-heart"></i></div><h3>Our Mission</h3><p>To serve authentic, affordable Filipino comfort food to every Filipino — students, workers, and families — 24 hours a day, with the warmth of a home-cooked meal.</p></div>
-        <div class="m-card"><div class="m-icon"><i class="fas fa-eye"></i></div><h3>Our Vision</h3><p>To become the go-to tapsilogan brand in Metro Manila, known for consistent quality, speed, and a Filipino dining experience that never sleeps.</p></div>
-        <div class="m-card"><div class="m-icon"><i class="fas fa-star"></i></div><h3>Our Values</h3><p>Authenticity in every recipe. Respect for every customer. Commitment to freshness. Pride in being Filipino. And a smile — even at 3AM.</p></div>
-        <div class="m-card"><div class="m-icon"><i class="fas fa-users"></i></div><h3>Our Community</h3><p>We serve students, jeepney drivers, office workers, night owls, and families. Everyone is welcome at Egoy's table — no matter the hour.</p></div>
+
+    <div class="menu-grid" id="menuGridBody">
       </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <div class="tag"><i class="fas fa-history"></i> Timeline</div>
-      <h2 class="section-title">Our <span>Journey</span></h2>
-      <div style="max-width:560px">
-        <div class="timeline">
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2023</div><div class="tl-text">Aldrin Perez opens Egoy's Tapsihan Lugawan — serving authentic Filipino comfort food 24/7 from day one.</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2024</div><div class="tl-text">Expanded dine-in capacity and introduced the beloved Unlimited Lugaw. Reached 200 daily orders milestone.</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2025</div><div class="tl-text">Launched online ordering via Facebook and Messenger. Reached 500 daily orders. Introduced GCash & Maya payments.</div></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2026</div><div class="tl-text">Launched this PWA for seamless online ordering, digital payments, and delivery tracking — available 24/7.</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
 </div>
 
-<!-- ===================== SERVICES ===================== -->
-<div class="page" id="page-services">
-  <section class="section">
-    <div class="container">
-      <div class="tag"><i class="fas fa-concierge-bell"></i> What We Offer</div>
-      <h2 class="section-title">Our <span>Services</span></h2>
-      <p class="section-sub">Multiple ways to enjoy Egoy's — your convenience is our priority</p>
-      <div class="services-grid">
-        <!-- Dine-In: removed airconditioned and free wifi -->
-        <div class="svc-card">
-          <div class="svc-icon"><i class="fas fa-chair"></i></div>
-          <h3>Dine-In</h3>
-          <p>Enjoy your meal in our cozy dining area. Comfortable seating for individuals and families.</p>
-          <div class="svc-feats">
-            <div class="svc-feat"><i class="fas fa-check"></i> 20 seats available</div>
-            <div class="svc-feat"><i class="fas fa-check"></i> Open 24/7</div>
-            <div class="svc-feat"><i class="fas fa-check"></i> Clean & welcoming atmosphere</div>
-            <div class="svc-feat"><i class="fas fa-check"></i> Family-friendly</div>
-          </div>
+<div id="page-services" class="page section-alt">
+  <div class="container section-sm">
+    <div class="tag">💼 Serbisyo</div>
+    <h2 class="section-title">Paano Kami <span>Makakatulong</span></h2>
+    <p class="section-sub">Hindi lang kami basta kainan, layunin naming magbigay ng ngiti sa bawat gutom na tiyan.</p>
+    
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-store"></i></div>
+        <h3>Dine-In Comfort</h3>
+        <p>Maluwag, malinis, at maaliwalas na paligid para sa buong pamilya o barkada.</p>
+        <div class="svc-feats">
+          <div class="svc-feat"><i class="fas fa-check"></i> Airconditioned Spaces Available</div>
+          <div class="svc-feat"><i class="fas fa-check"></i> High-speed Free Wifi</div>
         </div>
-        <div class="svc-card">
-          <div class="svc-icon"><i class="fas fa-shopping-bag"></i></div>
-          <h3>Take-Out / Pickup</h3>
-          <p>Order online or walk in and take your food to go. Quick preparation — most orders ready in under 10 minutes.</p>
-          <div class="svc-feats">
-            <div class="svc-feat"><i class="fas fa-check"></i> Order via app or walk-in</div>
-            <div class="svc-feat"><i class="fas fa-check"></i> Ready in 5–10 mins</div>
-            <div class="svc-feat"><i class="fas fa-check"></i> Eco-friendly packaging</div>
-            <div class="svc-feat"><i class="fas fa-check"></i> No extra charge</div>
-          </div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon"><i class="fas fa-motorcycle"></i></div>
-          <h3>Delivery</h3>
-          <p>We deliver hot meals straight to your door. Partner riders available all day, every day — even midnight!</p>
-          <div class="svc-feats">
-            <div class="svc-feat"><i class="fas fa-check"></i> 5km delivery radius</div>
-            <div class="svc-feat"><i class="fas fa-check"></i> 30–45 min ETA</div>
-            <div class="svc-feat"><i class="fas fa-check"></i> Free for orders ₱250+</div>
-            <div class="svc-feat"><i class="fas fa-check"></i> GCash / Maya payment</div>
-          </div>
-        </div>
-        <!-- Catering REMOVED as requested -->
       </div>
-      <div style="margin-top:60px">
-        <div class="tag"><i class="fas fa-clock"></i> Operating Hours</div>
-        <h2 class="section-title">We're <span>Always Open</span></h2>
-        <div class="hours-table">
-          <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time">12:00 AM – 12:00 AM (24 hrs)</span><span class="hours-status">● Open</span></div>
-          <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">12:00 AM – 12:00 AM (24 hrs)</span><span class="hours-status">● Open</span></div>
-          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">12:00 AM – 12:00 AM (24 hrs)</span><span class="hours-status">● Open</span></div>
-          <div class="hours-row"><span class="hours-day">Holidays</span><span class="hours-time">12:00 AM – 12:00 AM (24 hrs)</span><span class="hours-status">● Open</span></div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-motorcycle"></i></div>
+        <h3>24/7 Home Delivery</h3>
+        <p>Ipadala ang paborito mong chibog kahit madaling araw na sa pamamagitan ng aming app.</p>
+        <div class="svc-feats">
+          <div class="svc-feat"><i class="fas fa-check"></i> No Minimum Order Requirement</div>
+          <div class="svc-feat"><i class="fas fa-check"></i> Cash on Delivery Option</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><i class="fas fa-boxes"></i></div>
+        <h3>Bulk Orders & Catering</h3>
+        <p>May handaan o event? Sagot namin ang masasarap na Tapsilog at Lugaw pansalo sa bayan.</p>
+        <div class="svc-feats">
+          <div class="svc-feat"><i class="fas fa-check"></i> Custom Packed Lunch Boxes</div>
+          <div class="svc-feat"><i class="fas fa-check"></i> Big Discounts for 50+ Pax</div>
         </div>
       </div>
     </div>
-  </section>
-</div>
 
-<!-- ===================== MENU ===================== -->
-<div class="page" id="page-menu">
-  <section class="section">
-    <div class="container">
-      <div class="tag"><i class="fas fa-utensils"></i> What's Cooking</div>
-      <h2 class="section-title">Our <span>Menu</span></h2>
-      <p class="section-sub">Fresh, authentic, always available — order now!</p>
-      <div class="menu-filters" id="menuFilters">
-        <button class="f-btn active" onclick="filterMenu('all',this)">All Items</button>
-        <button class="f-btn" onclick="filterMenu('bestseller',this)">⭐ Best Sellers</button>
-        <button class="f-btn" onclick="filterMenu('tapsilog',this)">🍳 Tapsilog</button>
-        <button class="f-btn" onclick="filterMenu('lugaw',this)">🍚 Lugaw</button>
-        <button class="f-btn" onclick="filterMenu('addon',this)">➕ Add-Ons</button>
+    <div class="hours-table">
+      <div class="hours-row">
+        <div class="hours-day">Araw ng Operasyon</div>
+        <div class="hours-time">Oras</div>
+        <div class="hours-status">Status</div>
       </div>
-      <div class="menu-grid" id="menuGrid"></div>
+      <div class="hours-row">
+        <div class="hours-day">Lunes hanggang Linggo (Everyday)</div>
+        <div class="hours-time">24 Oras Walang Patid (24/7 Continuous)</div>
+        <div class="hours-status">Open Always</div>
+      </div>
     </div>
-  </section>
+  </div>
 </div>
 
-<!-- ===================== ORDER / CHECKOUT ===================== -->
-<div class="page" id="page-order">
-  <section class="section">
-    <div class="container" id="orderWrap">
-      <div id="orderContent">
-        <div class="tag"><i class="fas fa-shopping-bag"></i> Checkout</div>
-        <h2 class="section-title">Your <span>Order</span></h2>
-        <div id="emptyCart" style="text-align:center;padding:72px 0;display:none">
-          <div style="font-size:64px;margin-bottom:14px">🛒</div>
-          <h3 style="font-size:24px;font-weight:800;margin-bottom:8px">Your cart is empty!</h3>
-          <p style="color:var(--text2);margin-bottom:22px">Go to the menu and add some delicious items</p>
-          <button class="btn btn-primary btn-lg" onclick="nav('menu')">Browse Menu</button>
+<div id="page-about" class="page">
+  <div class="container section-sm">
+    <div class="about-hero-grid">
+      <div class="about-photo">
+        🍳🏠🥣
+        <div class="about-photo-label">Original Egoy's Hub Since 2023</div>
+      </div>
+      <div>
+        <div class="tag">📖 Ang Aming Kwento</div>
+        <h2 class="section-title">Lutong Bahay, Isang <span>Dekada ng Pagmamahal</span></h2>
+        <p class="hero-desc" style="max-width:100%">Nagsimula ang Egoy's Tapsihan bilang isang maliit na kariton sa gilid ng kalsada noong taong 2023. Sa simpleng pangarap na makapagbigay ng masustansya at abot-kayang lugaw sa mga manggagawa sa gabi, ang aming sikretong timpla ay minahal at dinagsa ng mga suki hanggang sa lumago at magkaroon ng sariling mga pwesto.</p>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="num">3+</div><div class="lbl">Mga Sangay / Branches</div></div>
+          <div class="stat-card"><div class="num">50k+</div><div class="lbl">Masasayang Suki</div></div>
         </div>
-        <div id="checkoutContent" class="checkout-grid">
-          <div>
-            <div class="form-section">
-              <div class="form-section-title"><i class="fas fa-map-marker-alt"></i> Order Type</div>
-              <div class="ot-grid">
-                <button class="ot-btn sel" onclick="setOrderType('pickup',this)"><i class="fas fa-shopping-bag"></i><span>Pickup</span></button>
-                <button class="ot-btn" onclick="setOrderType('delivery',this)"><i class="fas fa-motorcycle"></i><span>Delivery</span></button>
-              </div>
-              <div id="deliveryFields">
-                <div class="form-row">
-                  <div class="fg"><label class="fl">Full Name</label><input class="fi" type="text" placeholder="Juan dela Cruz" id="f-name"></div>
-                  <div class="fg"><label class="fl">Phone</label><input class="fi" type="tel" placeholder="09XX XXX XXXX" id="f-phone"></div>
-                </div>
-                <div class="form-row">
-                  <div class="fg"><label class="fl">Barangay</label><input class="fi" type="text" placeholder="Brgy. Name" id="f-brgy"></div>
-                  <div class="fg"><label class="fl">City</label><input class="fi" type="text" placeholder="Quezon City" id="f-city" value="Quezon City"></div>
-                </div>
-                <div class="fg"><label class="fl">Street Address</label><input class="fi" type="text" placeholder="House #, Street, Barangay" id="f-addr"></div>
-              </div>
-              <div class="fg" style="margin-top:4px"><label class="fl">Special Instructions (optional)</label><textarea class="fi" rows="2" placeholder="e.g. Extra spicy, no egg, ring doorbell..." style="resize:vertical" id="f-notes"></textarea></div>
+      </div>
+    </div>
+
+    <div class="mission-grid">
+      <div class="m-card">
+        <div class="m-icon"><i class="fas fa-eye"></i></div>
+        <h3>Ang Aming Layunin / Vision</h3>
+        <p>Maging pangunahing tatak ng 24/7 Tapsilugan sa bansa na kilala sa pagpapanatili ng tradisyonal na sarap at de-kalidad na serbisyo sa bawat Pilipino.</p>
+      </div>
+      <div class="m-card">
+        <div class="m-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Ang Aming Misyon / Mission</h3>
+        <p>Maghain ng ligtas, malinis, masarap, at abot-kayang pagkain sa lahat ng oras, habang nagbibigay ng maayos na kabuhayan sa aming mga empleyado at riders.</p>
+      </div>
+    </div>
+
+    <div class="section-sm">
+      <div class="tag">⏳ Milestone</div>
+      <h2 class="section-title">Aming <span>Timeline</span></h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2023</div>
+          <div class="tl-text">Itinatag ang unang Egoy's Cart na nagbebenta lamang ng P20 Lugaw at Tokwa't Baboy.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2024</div>
+          <div class="tl-text">Nagbukas ang unang permanenteng kainan na 24/7 at isinama ang Tapsilog Meals sa Menu.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025</div>
+          <div class="tl-text">Inilunsad ang Online Delivery App system at nagkaroon ng sariling fleet ng 10 delivery riders.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2026</div>
+          <div class="tl-text">Pagpapalawak sa mga karatig-bayan at modernisasyon ng aming digital kitchen dashboard system.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page-contact" class="page section-alt">
+  <div class="container section-sm">
+    <div class="tag">📞 Makipag-ugnayan</div>
+    <h2 class="section-title">Nandito Kami Para sa <span>Iyo</span></h2>
+    <p class="section-sub">May katanungan, feedback, o nais mag-bulk order? Padalhan kami ng mensahe.</p>
+    
+    <div class="contact-grid">
+      <div>
+        <div class="contact-infos">
+          <div class="ci-card">
+            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="ci-label">Pangunahing Sangay (Main Store)</div>
+              <div class="ci-value">123 Egoy Street, Poblacion Hub, Metro Manila</div>
             </div>
-            <div class="form-section">
-              <div class="form-section-title"><i class="fas fa-credit-card"></i> Payment Method</div>
-              <div class="pay-grid">
-                <button class="pay-btn sel" onclick="setPay('gcash',this)"><div class="pay-logo gcash-logo">G</div><span>GCash</span></button>
-                <button class="pay-btn" onclick="setPay('maya',this)"><div class="pay-logo maya-logo">M</div><span>Maya</span></button>
-                <button class="pay-btn" onclick="setPay('cash',this)"><div class="pay-logo cash-logo"><i class="fas fa-money-bill"></i></div><span>Cash</span></button>
-              </div>
-            </div>
-            <button class="btn btn-primary" style="width:100%;font-size:18px;padding:16px;min-height:56px" onclick="placeOrder()" id="placeOrderBtn"><i class="fas fa-check-circle"></i> Place Order</button>
           </div>
-          <div class="order-sum-card">
-            <div class="osm-title">Order Summary</div>
-            <div id="osmItems"></div>
-            <div class="osm-fees">
-              <div class="fee-row"><span>Subtotal</span><span id="osmSub">₱0</span></div>
-              <div class="fee-row" id="osmDelRow"><span>Delivery Fee</span><span id="osmDel">₱50</span></div>
-              <div class="fee-row"><span>Service Fee</span><span>₱10</span></div>
+          <div class="ci-card">
+            <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <div class="ci-label">Hotline & Delivery Phone</div>
+              <div class="ci-value">(02) 8888-EGOY / 0917-123-4567</div>
             </div>
-            <div class="osm-total"><span>Total</span><span id="osmTotal">₱0</span></div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="ci-label">Email Support</div>
+              <div class="ci-value">sarap@egoystapsilogan.com</div>
+            </div>
           </div>
         </div>
+
+        <div class="social-row">
+          <a href="#" class="soc-link"><i class="fab fa-facebook"></i> Facebook</a>
+          <a href="#" class="soc-link"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="#" class="soc-link"><i class="fab fa-tiktok"></i> TikTok</a>
+        </div>
       </div>
-      <!-- CONFIRMATION -->
-      <div id="confirmPage" class="confirm-page" style="display:none">
-        <div class="confirm-icon"><i class="fas fa-check"></i></div>
-        <div class="confirm-num" id="confirmNum">ORDER #ETL-0000</div>
-        <h2 class="confirm-title">Order Placed! 🎉</h2>
-        <p class="confirm-sub">Your order has been received and is being prepared right now. Get ready for something delicious!</p>
-        <div class="confirm-eta"><i class="fas fa-clock"></i> Estimated: <strong>30–45 minutes</strong></div>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-          <button class="btn btn-primary btn-lg" onclick="nav('menu')"><i class="fas fa-plus"></i> Order More</button>
-          <button class="btn btn-outline btn-lg" onclick="nav('home')">Back to Home</button>
+
+      <div>
+        <div class="map-box">
+          <div class="map-grid"></div>
+          <div class="map-placeholder">
+            <i class="fas fa-map-marked-alt"></i>
+            <strong>Egoy's Tapsihan Interactive Map</strong>
+            <span>Sariwang luto malapit sa iyo</span>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+
+    <div class="contact-form">
+      <div class="form-section-title" style="margin-bottom:14px"><i class="fas fa-paper-plane"></i> Quick Message Form</div>
+      <div class="form-row">
+        <div class="fg"><label class="fl">Pangalan</label><input class="fi" placeholder="Juan Dela Cruz"></div>
+        <div class="fg"><label class="fl">Email o Phone</label><input class="fi" placeholder="juan@gmail.com"></div>
+      </div>
+      <div class="fg"><label class="fl">Mensahe / Katanungan</label><textarea class="fi" style="height:110px;resize:none" placeholder="Isulat dito ang iyong mensahe..."></textarea></div>
+      <button class="btn btn-primary" onclick="showToast('✉️','Salamat! Natanggap namin ang iyong mensahe.')">Ipadala ang Mensahe</button>
+    </div>
+  </div>
 </div>
 
-<!-- ===================== AUTH ===================== -->
-<div class="page" id="page-auth">
+<div id="page-auth" class="page">
   <div class="auth-wrap">
     <div class="auth-card">
       <div class="auth-logo">
-        <div class="auth-logo-icon">🍲</div>
-        <h2>Egoy's Tapsihan</h2>
-        <p>Sign in to track orders & manage your account</p>
+        <div class="auth-logo-icon">🍳</div>
+        <h2>Egoy's Account Hub</h2>
+        <p>Mag-login para sa mabilis na checkout at rewards points</p>
       </div>
       <div class="auth-tabs">
-        <button class="auth-tab active" onclick="authTab('login',this)">Sign In</button>
-        <button class="auth-tab" onclick="authTab('register',this)">Register</button>
+        <button class="auth-tab active" id="tabLogin" onclick="switchAuthTab('login')">Sign In</button>
+        <button class="auth-tab" id="tabRegister" onclick="switchAuthTab('register')">Register</button>
       </div>
-      <!-- LOGIN -->
-      <div class="auth-form active" id="af-login">
-        <div class="fg"><label class="fl">Email</label><input class="fi" type="email" placeholder="juan@email.com" id="loginEmail"></div>
-        <div class="fg"><label class="fl">Password</label><input class="fi" type="password" placeholder="••••••••" id="loginPass"></div>
-        <div class="forgot-link"><a href="#" onclick="showToast('📧','Password reset sent to your email!')">Forgot password?</a></div>
-        <button class="btn btn-primary" style="width:100%" id="loginBtn" onclick="doLogin()"><i class="fas fa-sign-in-alt"></i> Sign In</button>
-        <div class="divider-or">or continue with</div>
-        <div style="display:flex;gap:10px;margin-bottom:14px">
-          <button class="btn btn-outline" style="flex:1;border-color:#1877F3;color:#1877F3" onclick="socialLogin('facebook')"><i class="fab fa-facebook"></i> Facebook</button>
-          <button class="btn btn-outline" style="flex:1;border-color:#EA4335;color:#EA4335" onclick="socialLogin('google')"><i class="fab fa-google"></i> Google</button>
-        </div>
-        <div class="divider-or">or use a demo account</div>
+      
+      <div class="auth-form active" id="formLogin">
+        <div class="fg"><label class="fl">Email Address</label><input class="fi" type="email" placeholder="egoy@example.com" id="liEmail"></div>
+        <div class="fg"><label class="fl">Password</label><input class="fi" type="password" placeholder="••••••••" id="liPassword"></div>
+        <div class="forgot-link"><a href="#">Nakalimutan ang Password?</a></div>
+        <button class="btn btn-primary" style="width:100%" onclick="handleAuthAction('login')">Sign In to My Account</button>
+        <div class="divider-or">O GAMITIN ANG DEMO ACCOUNTS</div>
         <div class="demo-box">
-          <h4>Demo Accounts</h4>
+          <h4>Pumili ng Role para sa Testing:</h4>
           <div class="demo-row">
-            <div class="demo-info"><strong>Admin Account</strong><span>admin@egoys.com / admin123</span></div>
-            <button class="use-btn" onclick="fillLogin('admin@egoys.com','admin123')">Use</button>
+            <div class="demo-info"><strong>Admin Dashboard</strong><span>admin@egoy.com / admin123</span></div>
+            <button class="use-btn" onclick="fillDemo('admin@egoy.com','admin123')">Use</button>
           </div>
           <div class="demo-row">
-            <div class="demo-info"><strong>Guest Account</strong><span>guest@egoys.com / guest123</span></div>
-            <button class="use-btn" onclick="fillLogin('guest@egoys.com','guest123')">Use</button>
+            <div class="demo-info"><strong>Regular Customer</strong><span>suki@gmail.com / suki123</span></div>
+            <button class="use-btn" onclick="fillDemo('suki@gmail.com','suki123')">Use</button>
           </div>
         </div>
       </div>
-      <!-- REGISTER -->
-      <div class="auth-form" id="af-register">
-        <div class="form-row">
-          <div class="fg"><label class="fl">First Name</label><input class="fi" type="text" placeholder="Juan" id="reg-fname"></div>
-          <div class="fg"><label class="fl">Last Name</label><input class="fi" type="text" placeholder="dela Cruz" id="reg-lname"></div>
+
+      <div class="auth-form" id="formRegister">
+        <div class="fg"><label class="fl">Buong Pangalan</label><input class="fi" placeholder="Pedro Penduko" id="rgName"></div>
+        <div class="fg"><label class="fl">Email Address</label><input class="fi" type="email" placeholder="pedro@gmail.com" id="rgEmail"></div>
+        <div class="fg"><label class="fl">Mobile Number</label><input class="fi" placeholder="0917XXXXXXX" id="rgPhone"></div>
+        <div class="fg"><label class="fl">Password</label><input class="fi" type="password" placeholder="Gumawa ng password" id="rgPassword"></div>
+        <button class="btn btn-yellow" style="width:100%" onclick="handleAuthAction('register')">Register Account</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page-profile" class="page section-alt">
+  <div class="container section-sm">
+    <div class="tag">👤 Aking Suki Hub</div>
+    <h2 class="section-title" id="profileTitle">Kumusta, <span>Suki!</span></h2>
+    <p class="section-sub">Subaybayan ang iyong kasalukuyang orders at nakaraang chibog history.</p>
+
+    <div class="form-section">
+      <div class="form-section-title"><i class="fas fa-history"></i> Kasaysayan ng mga Orders (Order History)</div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Petsa (Date)</th>
+              <th>Mga Kinuha (Items)</th>
+              <th>Kabuuang Bayad</th>
+              <th>Uri (Type)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="userOrdersHistoryBody">
+            <tr><td colspan="6" style="text-align:center;color:var(--text4);padding:32px">Mag-order muna para makita ang history rito.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="page-checkout" class="page">
+  <div class="container section-sm">
+    <div class="tag">🛒 Isang Hakbang Na Lang</div>
+    <h2 class="section-title">Kumpletuhin ang <span>Order</span></h2>
+    <p class="section-sub">Siguraduhing tama ang iyong detalye para sa mabilis na paghahanda.</p>
+
+    <div class="checkout-grid">
+      <div>
+        <div class="form-section">
+          <div class="form-section-title"><i class="fas fa-truck"></i> Paraan ng Pagkuha (Order Type)</div>
+          <div class="ot-grid">
+            <div class="ot-btn sel" id="ot-delivery" onclick="setOrderType('delivery')"><i class="fas fa-motorcycle"></i><span>Home Delivery</span></div>
+            <div class="ot-btn" id="ot-pickup" onclick="setOrderType('pickup')"><i class="fas fa-store"></i><span>Store Pickup</span></div>
+          </div>
+          
+          <div class="form-section-title"><i class="fas fa-user-edit"></i> Impormasyon sa Customer</div>
+          <div class="fg"><label class="fl">Buong Pangalan ng Tatanggap</label><input class="fi" id="coName" placeholder="Juan Dela Cruz"></div>
+          <div class="form-row">
+            <div class="fg"><label class="fl">Mobile Number</label><input class="fi" id="coPhone" placeholder="0917XXXXXXX"></div>
+            <div class="fg"><label class="fl">Alternatibong Phone (Optional)</label><input class="fi" placeholder="Optional"></div>
+          </div>
+          <div class="fg" id="deliveryAddressGroup"><label class="fl">Eksaktong Adres para sa Delivery</label><textarea class="fi" id="coAddress" style="height:72px;resize:none" placeholder="House No., Street Name, Barangay, Landmark"></textarea></div>
+          <div class="fg"><label class="fl">Tala / Notes para sa Kusina o Rider</label><input class="fi" id="coNotes" placeholder="Dagdagan ang sabaw, paki-hiwalay ang sili, atbp."></div>
         </div>
-        <div class="fg"><label class="fl">Email</label><input class="fi" type="email" placeholder="juan@email.com" id="reg-email"></div>
-        <div class="fg"><label class="fl">Phone</label><input class="fi" type="tel" placeholder="09XX XXX XXXX" id="reg-phone"></div>
-        <div class="fg"><label class="fl">Password</label><input class="fi" type="password" placeholder="Min. 8 characters" id="reg-pass"></div>
-        <button class="btn btn-primary" style="width:100%" id="registerBtn" onclick="doRegister()"><i class="fas fa-user-plus"></i> Create Account</button>
-        <div class="divider-or">or sign up with</div>
-        <div style="display:flex;gap:10px">
-          <button class="btn btn-outline" style="flex:1;border-color:#1877F3;color:#1877F3" onclick="socialLogin('facebook')"><i class="fab fa-facebook"></i> Facebook</button>
-          <button class="btn btn-outline" style="flex:1;border-color:#EA4335;color:#EA4335" onclick="socialLogin('google')"><i class="fab fa-google"></i> Google</button>
+
+        <div class="form-section">
+          <div class="form-section-title"><i class="fas fa-credit-card"></i> Paraan ng Pagbabayad (Payment Method)</div>
+          <div class="pay-grid">
+            <div class="pay-btn sel" id="pm-gcash" onclick="setPaymentMethod('gcash')"><div class="pay-logo gcash-logo">G</div><span>GCash App</span></div>
+            <div class="pay-btn" id="pm-maya" onclick="setPaymentMethod('maya')"><div class="pay-logo maya-logo">M</div><span>Maya App</span></div>
+            <div class="pay-btn" id="pm-cash" onclick="setPaymentMethod('cash')"><div class="pay-logo cash-logo"><i class="fas fa-money-bill-wave"></i></div><span>Cash (COD)</span></div>
+          </div>
+          <button class="btn btn-primary btn-lg" style="width:100%;margin-top:10px" onclick="processCheckoutSubmit()">I-Kasá Na Ang Order (Place Order) <i class="fas fa-check-circle"></i></button>
+        </div>
+      </div>
+
+      <div class="order-sum-card">
+        <div class="osm-title">Kabuuan ng mga Kinuha</div>
+        <div id="checkoutSummaryItems">
+          </div>
+        <div class="osm-fees">
+          <div class="fee-row"><span>Subtotal Items</span><span id="coSubtotal">P0.00</span></div>
+          <div class="fee-row" id="coDelRow"><span>Delivery Service Fee</span><span id="coDeliveryFee">P45.00</span></div>
+          <div class="fee-row"><span>Kitchen Container Box</span><span style="color:#4ADE80">FREE</span></div>
+          <div class="osm-total"><span>Kabuuang Bayad</span><span id="coTotal">P0.00</span></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ===================== CONTACT ===================== -->
-<div class="page" id="page-contact">
-  <section class="section">
-    <div class="container">
-      <div class="tag"><i class="fas fa-map-marker-alt"></i> Find Us</div>
-      <h2 class="section-title">Contact <span>Us</span></h2>
-      <p class="section-sub">We're always open — drop by, call, or message us anytime!</p>
-      <div class="contact-grid">
-        <div>
-          <div class="map-box">
-            <div class="map-grid"></div>
-            <div class="map-placeholder">
-              <i class="fas fa-map-marked-alt"></i>
-              <strong>Egoy's Tapsihan Lugawan</strong>
-              <span>123 Quirino Highway, Quezon City</span>
-              <br><br>
-              <button class="btn btn-sm btn-primary" style="margin-top:8px" onclick="window.open('https://maps.google.com/?q=Quezon+City+Philippines','_blank')"><i class="fas fa-external-link-alt"></i> Open in Maps</button>
-            </div>
-          </div>
-          <div class="social-row">
-            <a href="#" class="soc-link"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="#" class="soc-link"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#" class="soc-link"><i class="fab fa-tiktok"></i> TikTok</a>
-            <a href="#" class="soc-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-          </div>
-        </div>
-        <div class="contact-infos">
-          <div class="ci-card"><div class="ci-icon"><i class="fas fa-phone"></i></div><div><div class="ci-label">24/7 Hotline</div><div class="ci-value">+63 917 XXX XXXX</div></div></div>
-          <div class="ci-card"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><div class="ci-label">Email</div><div class="ci-value">egoys@tapsihan.ph</div></div></div>
-          <div class="ci-card"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="ci-label">Address</div><div class="ci-value">123 Quirino Highway, Brgy. Talipapa, Quezon City</div></div></div>
-          <div class="ci-card"><div class="ci-icon"><i class="fas fa-clock"></i></div><div><div class="ci-label">Operating Hours</div><div class="ci-value">24 Hours, 7 Days a Week</div></div></div>
-        </div>
-      </div>
-      <div class="contact-form">
-        <h3 style="font-size:20px;font-weight:700;margin-bottom:18px">Send Us a Message</h3>
-        <div class="form-row">
-          <div class="fg"><label class="fl">Name</label><input class="fi" type="text" placeholder="Your name" id="contact-name"></div>
-          <div class="fg"><label class="fl">Email</label><input class="fi" type="email" placeholder="your@email.com" id="contact-email"></div>
-        </div>
-        <div class="fg"><label class="fl">Subject</label><input class="fi" type="text" placeholder="Order inquiry, feedback..." id="contact-subject"></div>
-        <div class="fg"><label class="fl">Message</label><textarea class="fi" rows="4" placeholder="Tell us how we can help..." style="resize:vertical" id="contact-msg"></textarea></div>
-        <button class="btn btn-primary" onclick="showToast('📧','Message sent! We\'ll reply within 24 hours.')"><i class="fas fa-paper-plane"></i> Send Message</button>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ===================== ADMIN ===================== -->
-<div class="page" id="page-admin">
-  <div class="admin-topbar" style="position:relative;top:0">
-    <div class="admin-tb-inner">
-      <div class="admin-badge-pill"><i class="fas fa-shield-alt"></i> Admin Control Panel — Egoy's</div>
-      <button class="btn btn-sm btn-outline" onclick="nav('home')">← Back to Site</button>
+<div id="page-confirm" class="page section-alt">
+  <div class="container">
+    <div class="confirm-page">
+      <div class="confirm-icon"><i class="fas fa-check"></i></div>
+      <div class="confirm-num" id="cfNum">ORDER ID: #EGY-10245</div>
+      <h2 class="confirm-title">Maraming Salamat sa Pag-order!</h2>
+      <p class="confirm-sub" id="cfSub">Ang iyong order ay natanggap na ng Egoy's main kitchen. Nagsisimula na kaming magluto.</p>
+      <div><div class="confirm-eta"><i class="fas fa-clock animate-spin"></i> Tinantyang Oras ng Pagdating: <span id="cfEta" style="color:var(--yellow);margin-left:4px">25-35 Mins</span></div></div>
+      <div style="display:flex;gap:12px;justify-content:center"><button class="btn btn-secondary" onclick="navigateTo('home')">Bumalik sa Home</button><button class="btn btn-outline" onclick="navigateTo('profile')">Tingnan ang My Orders</button></div>
     </div>
   </div>
-  <section class="section-sm">
-    <div class="container">
-      <!-- MENU MANAGEMENT -->
-      <div class="admin-panel">
-        <div class="admin-panel-title"><i class="fas fa-utensils"></i> Menu Management</div>
-        <div style="overflow-x:auto">
-          <table class="admin-table">
-            <thead><tr><th>Image</th><th>Item Name</th><th>Category</th><th>Price (₱)</th><th>Description</th><th>Actions</th></tr></thead>
-            <tbody id="adminMenuBody"></tbody>
-          </table>
-        </div>
-        <button class="btn btn-primary btn-sm" style="margin-top:14px" onclick="addMenuItem()"><i class="fas fa-plus"></i> Add New Item</button>
-      </div>
-      <!-- BUSINESS INFO — Full CMS -->
-      <div class="admin-panel">
-        <div class="admin-panel-title"><i class="fas fa-info-circle"></i> Business Information & Branding</div>
-        <!-- Logo Upload -->
-        <div style="display:flex;align-items:center;gap:18px;margin-bottom:20px;padding:16px;background:var(--black3);border-radius:var(--r-sm);border:1px solid var(--border)">
-          <div style="position:relative;width:72px;height:72px;border-radius:var(--r-sm);overflow:hidden;border:2px dashed var(--red);display:flex;align-items:center;justify-content:center;background:var(--black2);flex-shrink:0;cursor:pointer" title="Click to upload logo" id="logoUploadBox">
-            <span id="logoPreview" style="font-size:32px">🍲</span>
-            <input type="file" accept="image/*" style="position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%" onchange="uploadLogo(this)">
-          </div>
-          <div>
-            <div style="font-weight:700;font-size:15px;margin-bottom:3px">Company Logo</div>
-            <div style="font-size:13px;color:var(--text4)">Click the box to upload your logo image (PNG, JPG)</div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="fg"><label class="fl">Business Name</label><input class="fi edit-field" id="biz-name"></div>
-          <div class="fg"><label class="fl">Tagline / Slogan</label><input class="fi edit-field" id="biz-tag"></div>
-        </div>
-        <div class="form-row">
-          <div class="fg"><label class="fl">Phone / Hotline</label><input class="fi edit-field" id="biz-phone"></div>
-          <div class="fg"><label class="fl">Address</label><input class="fi edit-field" id="biz-addr"></div>
-        </div>
-        <div class="form-row">
-          <div class="fg"><label class="fl">Email</label><input class="fi edit-field" id="biz-email"></div>
-          <div class="fg"><label class="fl">GCash Number</label><input class="fi edit-field" id="biz-gcash"></div>
-        </div>
-        <div class="fg" style="margin-top:8px"><label class="fl"><i class="fas fa-book-open" style="color:var(--red);margin-right:6px"></i>Our Story (About Page)</label><textarea class="fi edit-field" rows="3" id="biz-story" style="resize:vertical"></textarea></div>
-        <div class="form-row">
-          <div class="fg"><label class="fl">Mission Statement</label><textarea class="fi edit-field" rows="2" id="biz-mission" style="resize:vertical"></textarea></div>
-          <div class="fg"><label class="fl">Vision Statement</label><textarea class="fi edit-field" rows="2" id="biz-vision" style="resize:vertical"></textarea></div>
-        </div>
-        <!-- QR Codes -->
-        <div style="background:var(--black3);border:1px solid var(--border);border-radius:var(--r-sm);padding:16px;margin-bottom:16px">
-          <div style="font-weight:700;font-size:15px;margin-bottom:12px;color:var(--red-light)"><i class="fas fa-qrcode"></i> Payment QR Codes</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-            <div>
-              <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text2)">GCash QR</div>
-              <div style="position:relative;width:100%;padding-top:100%;border:2px dashed var(--border);border-radius:var(--r-sm);overflow:hidden;cursor:pointer;background:var(--black2)" id="gcashQRBox">
-                <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px" id="gcashQRPreview">
-                  <i class="fas fa-qrcode" style="font-size:32px;color:var(--text4)"></i>
-                  <span style="font-size:12px;color:var(--text4)">Upload GCash QR</span>
-                </div>
-                <input type="file" accept="image/*" style="position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%" onchange="uploadQR('gcash',this)">
-              </div>
-            </div>
-            <div>
-              <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text2)">Maya QR</div>
-              <div style="position:relative;width:100%;padding-top:100%;border:2px dashed var(--border);border-radius:var(--r-sm);overflow:hidden;cursor:pointer;background:var(--black2)" id="mayaQRBox">
-                <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px" id="mayaQRPreview">
-                  <i class="fas fa-qrcode" style="font-size:32px;color:var(--text4)"></i>
-                  <span style="font-size:12px;color:var(--text4)">Upload Maya QR</span>
-                </div>
-                <input type="file" accept="image/*" style="position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%" onchange="uploadQR('maya',this)">
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="btn btn-yellow btn-sm" onclick="saveBizInfo()"><i class="fas fa-save"></i> Save All Changes</button>
-      </div>
-      <!-- RECENT ORDERS -->
-      <div class="admin-panel">
-        <div class="admin-panel-title"><i class="fas fa-receipt"></i> Recent Orders</div>
-        <div style="overflow-x:auto">
-          <table class="admin-table" id="adminOrdersTable">
-            <thead><tr><th>Order #</th><th>Customer</th><th>Items</th><th>Type</th><th>Total</th><th>Status</th><th>Time</th></tr></thead>
-            <tbody id="adminOrdersBody">
-              <tr><td colspan="7" style="text-align:center;color:var(--text4);padding:20px">Loading orders...</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
 
-<!-- ===================== PROFILE ===================== -->
-<div class="page" id="page-profile">
-  <section class="section">
-    <div class="container">
-      <div class="profile-grid">
-        <div class="profile-card">
-          <div class="profile-av" id="profAv">G</div>
-          <div class="profile-name" id="profName">Guest User</div>
-          <div class="profile-role" id="profRole">Customer</div>
-          <div class="profile-nav">
-            <button class="pnav-item active"><i class="fas fa-history"></i> Order History</button>
-            <button class="pnav-item" onclick="showToast('🔧','Settings coming soon!')"><i class="fas fa-cog"></i> Settings</button>
-            <button class="pnav-item" onclick="doLogout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
-          </div>
-        </div>
-        <div>
-          <h2 class="section-title" style="font-size:28px;margin-bottom:22px">Order <span>History</span></h2>
-          <div id="orderHistoryList">
-            <div style="text-align:center;color:var(--text4);padding:40px">Loading order history...</div>
-          </div>
-        </div>
-      </div>
+<div class="container section-xs">
+  <div class="adm-panel active" id="adm-panel-orders">
+    <div class="adm-panel-hd"><div class="adm-panel-title">System Kitchen Queue Dashboard</div><button class="btn btn-outline btn-sm" onclick="loadAdminOrders()"><i class="fas fa-sync-alt"></i> Refresh Queue</button></div>
+    <div class="adm-grid">
+      <div class="adm-stat"><div class="adm-stat-icon red"><i class="fas fa-fire"></i></div><div><div class="adm-stat-num" id="statPendingOrders">0</div><div class="adm-stat-lbl">Pending Orders</div></div></div>
+      <div class="adm-stat"><div class="adm-stat-icon yellow"><i class="fas fa-motorcycle"></i></div><div><div class="adm-stat-num" id="statActiveSales">P0</div><div class="adm-stat-lbl">Today's Revenue</div></div></div>
     </div>
-  </section>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Oras (Time)</th>
+            <th>Customer & Contact</th>
+            <th>Items Bucket Details</th>
+            <th>Kabuuang Singil</th>
+            <th>Payment</th>
+            <th>Kusina Action Status</th>
+          </tr>
+        </thead>
+        <tbody id="adminOrdersTableBody">
+          <tr><td colspan="7" style="text-align:center;color:var(--text4);padding:24px">Walang aktwal na order sa kasalukuyan.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="adm-panel" id="adm-panel-menu">
+    <div class="adm-panel-hd"><div class="adm-panel-title">Global Food Menu Pricing Manager</div><button class="btn btn-yellow btn-sm" onclick="addNewAdminMenuItem()"><i class="fas fa-plus"></i> Add New Dish</button></div>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th style="width:50px">Pic</th>
+            <th>Dish Name</th>
+            <th style="width:150px">Category</th>
+            <th style="width:110px">Price (PHP)</th>
+            <th style="width:70px">Emoji</th>
+            <th>Description Preview</th>
+            <th style="width:100px">Action</th>
+          </tr>
+        </thead>
+        <tbody id="adminMenuTableBody">
+          </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="adm-panel" id="adm-panel-config">
+    <div class="adm-panel-hd"><div class="adm-panel-title">System Global Settings Configurator</div></div>
+    <div style="max-width:500px">
+      <div class="fg"><label class="fl">Base Delivery Fee (PHP)</label><input class="fi" type="number" id="cfgDelFee" value="45"></div>
+      <div class="fg"><label class="fl">GCash Registered Phone Number</label><input class="fi" id="cfgGcashPhone" value="09171234567"></div>
+      <div class="fg"><label class="fl">Maya Registered Phone Number</label><input class="fi" id="cfgMayaPhone" value="09171112222"></div>
+      <button class="btn btn-primary" onclick="saveGlobalConfig()"><i class="fas fa-save"></i> Save All Settings</button>
+    </div>
+  </div>
 </div>
 
-<!-- ===== FOOTER ===== -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()">
+  <div class="cart-panel" onclick="event.stopPropagation()">
+    <div class="cart-hd"><div class="cart-title">Iyong Basket ng Pagkain</div><button class="cart-close-btn" onclick="toggleCart()"><i class="fas fa-times"></i></button></div>
+    <div class="cart-body" id="cartBodyContainer">
+      </div>
+    <div class="cart-ft">
+      <div class="cart-sub"><span>Subtotal Kinuha</span><span id="cartSubtotalValue">P0.00</span></div>
+      <div class="cart-total"><span>Kabuuang Halaga</span><span id="cartTotalValue">P0.00</span></div>
+      <button class="btn btn-primary btn-lg" style="width:100%" onclick="goToCheckoutPage()">Mag-checkout Na Kami <i class="fas fa-shopping-bag"></i></button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="qrModal">
+  <div class="modal">
+    <div class="modal-hd"><h3 id="qrModalTitle">E-Wallet Payment Gateway</h3><button class="cart-close-btn" onclick="closeQrModal()"><i class="fas fa-times"></i></button></div>
+    <div class="modal-body">
+      <div class="qr-amount" id="qrModalAmount">P0.00</div>
+      <div class="qr-note" id="qrModalNote">I-scan ang QR code sa ibaba gamit ang iyong App para magbayad.</div>
+      <div class="qr-box" id="qrCodeContainer">
+        </div>
+      <div class="qr-timer"><i class="fas fa-hourglass-half animate-pulse" style="color:var(--yellow)"></i> Mag-eexpire ang session sa: <span id="qrTimerValue">05:00</span></div>
+      <div class="sim-btn-wrap">
+        <button class="btn btn-secondary btn-sm" onclick="closeQrModal()">Kanselahin</button>
+        <button class="btn btn-yellow btn-sm" onclick="simulatePaymentSuccess()">I-Simulate ang Tagumpay ng Bayad (Success)</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toastBox"><div class="toast-icon" id="toastIcon">💡</div><div class="toast-msg" id="toastMsg">Notification message initialized.</div></div>
+
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>🍲 <span>Egoy's</span> Tapsihan</h3>
-        <p>Your neighborhood tapsilogan since 2023. Authentic Filipino comfort food, served fresh and hot — anytime, any day.</p>
-        <span class="footer-pill"><i class="fas fa-circle" style="font-size:8px"></i> Always Open 24/7</span>
-      </div>
-      <div class="footer-col"><h4>Navigate</h4><div class="footer-links"><a href="#" onclick="nav('home')">Home</a><a href="#" onclick="nav('about')">About Us</a><a href="#" onclick="nav('services')">Services</a><a href="#" onclick="nav('menu')">Menu</a></div></div>
-      <div class="footer-col"><h4>Order</h4><div class="footer-links"><a href="#" onclick="nav('menu')">Full Menu</a><a href="#" onclick="nav('order')">Checkout</a></div></div>
-      <div class="footer-col"><h4>Contact</h4><div class="footer-links"><a href="#">+63 917 XXX XXXX</a><a href="#">egoys@tapsihan.ph</a><a href="#" onclick="nav('contact')">Find Us</a></div></div>
+      <div><div class="footer-logo">EGOY'S <span>TAPSIHAN</span></div><p class="footer-desc">Nagbibigay ng masarap, malinis, at abot-kayang chibog para sa bawat Pilipino, 24 oras araw-araw.</p></div>
+      <div><div class="footer-hd">Quick Navigation</div><ul class="footer-links"><li><a href="#" onclick="navigateTo('home')">Home</a></li><li><a href="#" onclick="navigateTo('menu')">Food Menu</a></li><li><a href="#" onclick="navigateTo('services')">Our Services</a></li></ul></div>
+      <div><div class="footer-hd">Legal</div><ul class="footer-links"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Refund Policy</a></li></ul></div>
+      <div><div class="footer-hd">Operational Branch</div><p style="font-size:14px;line-height:1.6">Poblacion Main Core<br>Open 24/7 Mon-Sun<br>Hotline: (02) 8888-EGOY</p></div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 <span class="hl">Egoy's Tapsihan Lugawan</span>. All rights reserved. Built with ❤️</p>
-      <p>PWA v2.0 • GCash & Maya Accepted</p>
-    </div>
+    <div class="footer-btm"><div>&copy; 2026 Egoy's Tapsihan Lugawan System Corporation. All Rights Reserved.</div><div>Design and Architecture Platform Tier Engine V3</div></div>
   </div>
 </footer>
 
-<!-- ===== CART SIDEBAR ===== -->
-<div class="cart-overlay" id="cartOverlay" onclick="closeCartOverlay(event)">
-  <div class="cart-panel">
-    <div class="cart-hd">
-      <div class="cart-title">🛒 Your Cart</div>
-      <button class="cart-close-btn" onclick="toggleCart()"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="cart-body" id="cartBody"></div>
-    <div class="cart-ft" id="cartFt" style="display:none">
-      <div class="cart-sub"><span>Subtotal</span><span id="cartSub">₱0</span></div>
-      <div class="cart-total"><span>Total</span><span id="cartTot">₱0</span></div>
-      <button class="btn btn-primary" style="width:100%;font-size:16px" onclick="goCheckout()"><i class="fas fa-lock"></i> Proceed to Checkout</button>
-    </div>
-  </div>
-</div>
-
-<!-- ===== QR MODAL ===== -->
-<div class="modal-overlay" id="qrModal">
-  <div class="modal">
-    <div class="modal-hd">
-      <h3 id="qrTitle">Pay via GCash</h3>
-      <button class="cart-close-btn" onclick="closeQR()"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="modal-body">
-      <div class="qr-box" id="qrBoxContainer">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <rect x="5" y="5" width="30" height="30" fill="none" stroke="#000" stroke-width="3"/>
-          <rect x="10" y="10" width="20" height="20" fill="#000"/>
-          <rect x="65" y="5" width="30" height="30" fill="none" stroke="#000" stroke-width="3"/>
-          <rect x="70" y="10" width="20" height="20" fill="#000"/>
-          <rect x="5" y="65" width="30" height="30" fill="none" stroke="#000" stroke-width="3"/>
-          <rect x="10" y="70" width="20" height="20" fill="#000"/>
-          <rect x="40" y="40" width="20" height="20" fill="#000"/>
-          <rect x="40" y="5" width="5" height="5" fill="#000"/>
-          <rect x="50" y="5" width="5" height="5" fill="#000"/>
-          <rect x="40" y="15" width="5" height="5" fill="#000"/>
-          <rect x="55" y="10" width="5" height="5" fill="#000"/>
-          <rect x="65" y="40" width="5" height="5" fill="#000"/>
-          <rect x="75" y="45" width="5" height="5" fill="#000"/>
-          <rect x="85" y="40" width="5" height="5" fill="#000"/>
-          <rect x="5" y="40" width="5" height="5" fill="#000"/>
-          <rect x="15" y="45" width="5" height="5" fill="#000"/>
-          <rect x="25" y="40" width="5" height="5" fill="#000"/>
-          <rect x="40" y="65" width="5" height="5" fill="#000"/>
-          <rect x="50" y="70" width="5" height="5" fill="#000"/>
-          <rect x="60" y="65" width="5" height="5" fill="#000"/>
-        </svg>
-      </div>
-      <div class="qr-amount" id="qrAmount">₱0</div>
-      <div class="qr-note">Scan with <span id="qrApp">GCash</span> to complete payment</div>
-      <div class="qr-timer"><i class="fas fa-clock"></i> QR expires in <span id="qrCountdown">05:00</span></div>
-      <div class="sim-btn-wrap">
-        <button class="btn btn-primary" onclick="simPay()"><i class="fas fa-check"></i> Simulate Payment</button>
-        <button class="btn btn-outline" onclick="closeQR()">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- TOAST -->
-<div class="toast" id="toast">
-  <span class="toast-icon" id="toastIcon">✅</span>
-  <span id="toastMsg">Done!</span>
-</div>
-
 <script>
 // ============================================================
-// CONFIG — Backend API URL
-// Vercel: API lives on the same domain — no prefix needed!
+// SYSTEM ENGINE GLOBAL VARIABLES & INJECTED STATES
 // ============================================================
-const API_URL = ''; // Always empty on Vercel
-
-// ============================================================
-// DATA — Falls back to localStorage if API unavailable
-// ============================================================
-let menuData = JSON.parse(localStorage.getItem('egoys_menu')) || [
-  {id:1,name:'Unlimited Lugaw',  category:'bestseller',price:59, emoji:'🍚',description:'Unli rice porridge + egg + chicharon',image_url:''},
-  {id:2,name:'LiempoSiLog',      category:'bestseller',price:99, emoji:'🥩',description:'Grilled Liempo + Garlic Rice + Egg',image_url:''},
-  {id:3,name:'TapsiLog',         category:'tapsilog',  price:85, emoji:'🍳',description:'Classic Tapa, sinangag, itlog',image_url:''},
-  {id:4,name:'Pork SiLog',       category:'tapsilog',  price:85, emoji:'🍖',description:'Juicy Pork Chop + sinangag + egg',image_url:''},
-  {id:5,name:'Chicken SiLog',    category:'tapsilog',  price:85, emoji:'🍗',description:'Grilled Chicken + garlic rice + egg',image_url:''},
-  {id:6,name:'Special Lugaw',    category:'lugaw',     price:49, emoji:'🥣',description:'Loaded with egg, chicken, chicharon',image_url:''},
-  {id:7,name:'Extra Egg',        category:'addon',     price:15, emoji:'🥚',description:'Fried egg add-on',image_url:''},
-  {id:8,name:'Extra Rice',       category:'addon',     price:20, emoji:'🍙',description:'Garlic fried rice add-on',image_url:''},
-];
-let cart = JSON.parse(localStorage.getItem('egoys_cart')) || [];
+let menuData = [];
+let cart = [];
 let user = JSON.parse(localStorage.getItem('egoys_user')) || null;
-let bizConfig = JSON.parse(localStorage.getItem('egoys_biz')) || {};
-let payMethod = 'gcash', orderType = 'pickup', qrTimer = null;
+let selectedOrderType = 'delivery';
+let selectedPaymentMethod = 'gcash';
+let globalConfig = { deliveryFee: 45, gcashPhone: '09171234567', mayaPhone: '09171112222' };
+let currentActivePage = 'home';
+let currentActiveAdminPanel = 'orders';
+let qrCountdownInterval = null;
+let currentPendingOrderPayload = null;
 
-// ============================================================
-// API HELPER
-// ============================================================
-async function apiFetch(path, options = {}) {
+// Mock fallback localized structural array model database setup
+const LOCAL_FALLBACK_MENU = [
+  { id: 1, name: "Special Overload Tapsilog", price: 145, emoji: "🍳", img: "", cat: "tapsilog", description: "Sikat na Egoy beef tapa, sinangag, dalawang itlog, at sarsa.", category: "tapsilog" },
+  { id: 2, name: "Unlimited Rice Gotong Batangas", price: 95, emoji: "🍚", img: "", cat: "lugaw", description: "Malapot na goto, punong-puno ng tuwalya at sahog.", category: "lugaw" },
+  { id: 3, name: "Chicharong Bulaklak Crunch", price: 65, emoji: "🐷", img: "", cat: "addon", description: "Malutong at bagong piritong chicharong bulaklak.", category: "addon" },
+  { id: 4, name: "Egoy Lechon Kawali Tapsi", price: 135, emoji: "🥩", img: "", cat: "bestseller", description: "Crispy lechon kawali paired with garlic rice and egg.", category: "bestseller" },
+  { id: 5, name: "Lugaw Overload with Egg & Tokwa", price: 75, emoji: "🥣", img: "", cat: "lugaw", description: "Classic lugaw loaded with hard-boiled egg and crispy tokwa.", category: "lugaw" }
+];
+
+// Generic backend async wrapper layer
+async function apiFetch(endpoint, options = {}) {
   try {
-    const token = user?.token;
-    const headers = { 'Content-Type': 'application/json', ...(options.headers || {}) };
-    if (token) headers['Authorization'] = `Bearer ${token}`;
-    const res = await fetch(API_URL + path, { ...options, headers });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({ error: 'Request failed' }));
-      throw new Error(err.error || 'Request failed');
+    if(options.body && typeof options.body === 'string') {
+       options.headers = options.headers || {};
+       options.headers['Content-Type'] = options.headers['Content-Type'] || 'application/json';
     }
+    const res = await fetch(endpoint, options);
+    if (!res.ok) throw new Error(`HTTP network fault code: ${res.status}`);
     return await res.json();
-  } catch (e) {
-    console.warn('API unavailable, using local data:', e.message);
+  } catch (err) {
+    console.warn(`API Gateway redirection warning fallback initialized for pipeline: ${endpoint}. Exception trace:`, err);
     return null;
   }
 }
 
-// ============================================================
-// LOAD MENU FROM API
-// ============================================================
 async function loadMenu() {
   const data = await apiFetch('/api/menu');
-  if (data && Array.isArray(data) && data.length) {
+  if (data && Array.isArray(data) && data.length > 0) {
     menuData = data;
-    localStorage.setItem('egoys_menu', JSON.stringify(menuData));
+  } else {
+    const local = localStorage.getItem('egoys_menu');
+    menuData = local ? JSON.parse(local) : LOCAL_FALLBACK_MENU;
+    if(!local) localStorage.setItem('egoys_menu', JSON.stringify(menuData));
   }
+  renderMenuGrid();
 }
 
-// ============================================================
-// NAVIGATION
-// ============================================================
-function nav(id) {
+async function loadConfig() {
+  const data = await apiFetch('/api/config');
+  if (data && !data.error) {
+    globalConfig = { ...globalConfig, ...data };
+  } else {
+    const local = localStorage.getItem('egoys_config');
+    if(local) globalConfig = JSON.parse(local);
+  }
+  document.getElementById('cfgDelFee').value = globalConfig.deliveryFee;
+  document.getElementById('cfgGcashPhone').value = globalConfig.gcashPhone;
+  document.getElementById('cfgMayaPhone').value = globalConfig.mayaPhone;
+}
+
+// NAVIGATION FLOW CONTROLLER
+function navigateTo(pageId, element = null) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-  const pg = document.getElementById('page-' + id);
-  if (!pg) return;
-  pg.classList.add('active');
-  const nl = document.getElementById('nl-' + id);
-  if (nl) nl.classList.add('active');
-  window.scrollTo(0, 0);
-  if (id === 'menu') renderMenu('all');
-  if (id === 'order') renderOrderPage();
-  if (id === 'admin') {
-    if (!user || user.role !== 'admin') { showToast('❌', 'Admin access only!'); nav('auth'); return; }
-    renderAdminMenu();
-    populateAdminFields();
-    loadAdminOrders();
-  }
-  if (id === 'home') {
-    setTimeout(initCharts, 200);
-    updateDashboardVisibility();
-  }
-  if (id === 'profile') {
-    updateProfileUI();
-    loadOrderHistory();
-  }
-}
+  const targetPage = document.getElementById(`page-${pageId}`);
+  if(targetPage) targetPage.classList.add('active');
+  currentActivePage = pageId;
 
-// ============================================================
-// CHARTS
-// ============================================================
-let chartsReady = false;
-function initCharts() {
-  if (chartsReady) return;
-  chartsReady = true;
-  Chart.defaults.color = '#9CA3AF';
-  const grid = 'rgba(255,255,255,0.06)';
-
-  new Chart(document.getElementById('lineChart'), {
-    type: 'line',
-    data: {
-      labels: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],
-      datasets: [{
-        label: 'Orders',
-        data: [320,285,410,375,490,560,445],
-        borderColor: '#DC2626',
-        backgroundColor: 'rgba(220,38,38,0.1)',
-        borderWidth: 2.5,
-        pointBackgroundColor: '#DC2626',
-        pointRadius: 5,
-        tension: 0.4,
-        fill: true
-      }]
-    },
-    options: { responsive:true, maintainAspectRatio:false,
-      plugins:{legend:{display:false}},
-      scales:{x:{grid:{color:grid}},y:{grid:{color:grid},beginAtZero:true}} }
-  });
-
-  new Chart(document.getElementById('barChart'), {
-    type: 'bar',
-    data: {
-      labels: ['LiempoSiLog','Unli Lugaw','TapsiLog','PorkSiLog'],
-      datasets: [{ data:[210,195,165,140],
-        backgroundColor:['#DC2626','#FBBF24','#DC2626','#FBBF24'],
-        borderRadius: 6 }]
-    },
-    options: { responsive:true, maintainAspectRatio:false,
-      plugins:{legend:{display:false}},
-      scales:{x:{grid:{color:grid}},y:{grid:{color:grid},beginAtZero:true}} }
-  });
-
-  new Chart(document.getElementById('pieChart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Tapsilog 48%','Lugaw 32%','Add-ons 20%'],
-      datasets: [{ data:[48,32,20],
-        backgroundColor:['#DC2626','#FBBF24','#444444'],
-        borderWidth:0, hoverOffset:6 }]
-    },
-    options: { responsive:true, maintainAspectRatio:false,
-      plugins:{legend:{position:'bottom',labels:{padding:14,usePointStyle:true,font:{size:12}}}} }
-  });
-}
-
-// ============================================================
-// MENU RENDER
-// ============================================================
-function renderMenu(filter) {
-  const items = filter === 'all' ? menuData : menuData.filter(i => i.category === filter || i.cat === filter);
-  document.getElementById('menuGrid').innerHTML = items.map(item => `
-    <div class="menu-card">
-      <div class="menu-card-img">
-        ${item.image_url || item.img
-          ? `<img src="${item.image_url||item.img}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" alt="${item.name}">`
-          : item.emoji}
-        <span class="menu-cat-badge">${item.category||item.cat}</span>
-        ${(item.category||item.cat) === 'bestseller' ? '<span class="menu-best-badge">⭐ BEST</span>' : ''}
-      </div>
-      <div class="menu-card-body">
-        <div class="menu-card-name">${item.name}</div>
-        <div class="menu-card-desc">${item.description||item.desc}</div>
-        <div class="menu-card-ft">
-          <div class="menu-price">₱${item.price}</div>
-          <button class="add-btn" onclick="addToCart(${item.id})" title="Add to cart"><i class="fas fa-plus"></i></button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-
-function filterMenu(cat, btn) {
-  document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderMenu(cat);
-}
-
-function renderBestSellers() {
-  const bs = menuData.filter(i => (i.category||i.cat) === 'bestseller')
-    .concat(menuData.filter(i => (i.category||i.cat) === 'tapsilog').slice(0, 2));
-  document.getElementById('bestSellers').innerHTML = bs.slice(0, 4).map(item => `
-    <div class="food-card">
-      <div class="food-card-img">
-        ${item.image_url || item.img
-          ? `<img src="${item.image_url||item.img}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" alt="${item.name}">`
-          : item.emoji}
-        <span class="food-badge">${(item.category||item.cat) === 'bestseller' ? '⭐ Best Seller' : 'Popular'}</span>
-      </div>
-      <div class="food-card-body">
-        <div class="food-card-name">${item.name}</div>
-        <div class="food-card-desc">${item.description||item.desc}</div>
-        <div class="food-card-ft">
-          <div class="food-card-price">₱${item.price}</div>
-          <button class="add-btn" onclick="addToCart(${item.id})"><i class="fas fa-plus"></i></button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-
-function renderHeroItems() {
-  const items = menuData.filter(i => (i.category||i.cat) === 'bestseller').slice(0, 3);
-  document.getElementById('heroItems').innerHTML = items.map(item => `
-    <div class="hero-item">
-      <div class="hero-item-emoji">${item.emoji}</div>
-      <div>
-        <div class="hero-item-name">${item.name}</div>
-        <div class="hero-item-desc">${item.description||item.desc}</div>
-      </div>
-      <div class="hero-item-price">₱${item.price}</div>
-    </div>
-  `).join('');
-}
-
-// ============================================================
-// CART
-// ============================================================
-function addToCart(id) {
-  const item = menuData.find(i => i.id == id);
-  if (!item) return;
-  const ex = cart.find(c => c.id == id);
-  if (ex) ex.qty++;
-  else cart.push({ id: item.id, name: item.name, price: item.price, emoji: item.emoji, qty: 1 });
-  saveCart(); updateCartBadge();
-  showToast('✅', `${item.name} added to cart!`);
-}
-
-function removeFromCart(id) {
-  const idx = cart.findIndex(c => c.id == id);
-  if (idx < 0) return;
-  if (cart[idx].qty > 1) cart[idx].qty--;
-  else cart.splice(idx, 1);
-  saveCart(); updateCartBadge(); renderCartBody();
-}
-
-function saveCart() { localStorage.setItem('egoys_cart', JSON.stringify(cart)); }
-
-function updateCartBadge() {
-  const n = cart.reduce((s, c) => s + c.qty, 0);
-  const badge = document.getElementById('cartBadge');
-  badge.textContent = n;
-  badge.style.display = n > 0 ? 'flex' : 'none';
-}
-
-function renderCartBody() {
-  const body = document.getElementById('cartBody');
-  const ft = document.getElementById('cartFt');
-  if (!cart.length) {
-    body.innerHTML = `<div class="cart-empty"><i class="fas fa-shopping-basket"></i><p style="font-size:16px;margin-bottom:16px">Your cart is empty</p><button class="btn btn-primary btn-sm" onclick="nav('menu');toggleCart()">Browse Menu</button></div>`;
-    ft.style.display = 'none'; return;
-  }
-  const sub = cart.reduce((s, c) => s + c.price * c.qty, 0);
-  body.innerHTML = cart.map(item => `
-    <div class="cart-item">
-      <div class="cart-item-emoji">${item.emoji}</div>
-      <div class="cart-item-info">
-        <div class="cart-item-name">${item.name}</div>
-        <div class="cart-item-unit">₱${item.price} each</div>
-        <div class="cart-item-ctrl">
-          <button class="qty-btn" onclick="removeFromCart(${item.id})"><i class="fas fa-minus"></i></button>
-          <span class="qty-num">${item.qty}</span>
-          <button class="qty-btn" onclick="addToCart(${item.id})"><i class="fas fa-plus"></i></button>
-          <span class="cart-item-total">₱${item.price * item.qty}</span>
-        </div>
-      </div>
-    </div>
-  `).join('');
-  document.getElementById('cartSub').textContent = '₱' + sub;
-  document.getElementById('cartTot').textContent = '₱' + (sub + 10);
-  ft.style.display = 'block';
-}
-
-function toggleCart() {
-  const ov = document.getElementById('cartOverlay');
-  ov.classList.toggle('open');
-  if (ov.classList.contains('open')) renderCartBody();
-}
-function closeCartOverlay(e) { if (e.target === document.getElementById('cartOverlay')) toggleCart(); }
-function goCheckout() { toggleCart(); nav('order'); }
-
-// ============================================================
-// ORDER PAGE
-// ============================================================
-function renderOrderPage() {
-  const empty = document.getElementById('emptyCart');
-  const content = document.getElementById('checkoutContent');
-  const confirmPg = document.getElementById('confirmPage');
-  const orderContent = document.getElementById('orderContent');
-  confirmPg.style.display = 'none';
-  orderContent.style.display = 'block';
-  if (!cart.length) {
-    empty.style.display = 'block'; content.style.display = 'none';
+  // Sync nav element bindings
+  document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => a.classList.remove('active'));
+  if (element) {
+    element.classList.add('active');
   } else {
-    empty.style.display = 'none'; content.style.display = 'grid';
-    renderOrderSummary();
+    document.querySelectorAll(`a[onclick*="'${pageId}'"]`).forEach(a => a.classList.add('active'));
   }
-}
-
-function renderOrderSummary() {
-  const sub = cart.reduce((s, c) => s + c.price * c.qty, 0);
-  const del = orderType === 'delivery' ? 50 : 0;
-  document.getElementById('osmItems').innerHTML = cart.map(i => `
-    <div class="osm-item"><span><span class="osm-qty">×${i.qty}</span>${i.emoji} ${i.name}</span><span>₱${i.price*i.qty}</span></div>
-  `).join('');
-  document.getElementById('osmSub').textContent = '₱' + sub;
-  const delRow = document.getElementById('osmDelRow');
-  delRow.style.display = orderType === 'delivery' ? 'flex' : 'none';
-  document.getElementById('osmDel').textContent = '₱' + del;
-  document.getElementById('osmTotal').textContent = '₱' + (sub + del + 10);
-}
-
-function setOrderType(type, btn) {
-  orderType = type;
-  document.querySelectorAll('.ot-btn').forEach(b => b.classList.remove('sel'));
-  btn.classList.add('sel');
-  renderOrderSummary();
-}
-
-function setPay(method, btn) {
-  payMethod = method;
-  document.querySelectorAll('.pay-btn').forEach(b => b.classList.remove('sel'));
-  btn.classList.add('sel');
-}
-
-async function placeOrder() {
-  if (!cart.length) { showToast('❌', 'Cart is empty!'); return; }
-  const sub = cart.reduce((s, c) => s + c.price * c.qty, 0);
-  const total = sub + (orderType === 'delivery' ? 50 : 0) + 10;
-
-  const btn = document.getElementById('placeOrderBtn');
-  btn.disabled = true;
-  btn.innerHTML = '<span class="loading-spin"></span> Placing Order...';
-
-  // Try API first
-  const orderData = {
-    items: cart,
-    customer_name: document.getElementById('f-name')?.value || 'Walk-in',
-    phone: document.getElementById('f-phone')?.value || '',
-    address: document.getElementById('f-addr')?.value || '',
-    barangay: document.getElementById('f-brgy')?.value || '',
-    city: document.getElementById('f-city')?.value || '',
-    order_type: orderType,
-    pay_method: payMethod,
-    notes: document.getElementById('f-notes')?.value || '',
-    user_id: user?.id || null,
-  };
-
-  const result = await apiFetch('/api/orders', { method: 'POST', body: JSON.stringify(orderData) });
-
-  btn.disabled = false;
-  btn.innerHTML = '<i class="fas fa-check-circle"></i> Place Order';
-
-  if (payMethod === 'gcash' || payMethod === 'maya') {
-    showQR(payMethod, total, result?.order_number);
-  } else {
-    completeOrder(result?.order_number || ('#ETL-' + String(Math.floor(1000 + Math.random()*9000))));
-  }
-}
-
-function showQR(method, total, orderNum) {
-  document.getElementById('qrTitle').textContent = method === 'gcash' ? 'Pay via GCash' : 'Pay via Maya';
-  document.getElementById('qrAmount').textContent = '₱' + total;
-  document.getElementById('qrApp').textContent = method === 'gcash' ? 'GCash' : 'Maya';
-
-  // Show uploaded QR or fallback
-  const savedQR = method === 'gcash' ? bizConfig.img_gcash_qr || bizConfig.gcashQR : bizConfig.img_maya_qr || bizConfig.mayaQR;
-  const qrBox = document.getElementById('qrBoxContainer');
-  if (savedQR) {
-    qrBox.innerHTML = `<img src="${savedQR}" style="width:100%;height:100%;object-fit:contain;border-radius:8px">`;
-  } else {
-    qrBox.innerHTML = `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="5" width="30" height="30" fill="none" stroke="#000" stroke-width="3"/><rect x="10" y="10" width="20" height="20" fill="#000"/><rect x="65" y="5" width="30" height="30" fill="none" stroke="#000" stroke-width="3"/><rect x="70" y="10" width="20" height="20" fill="#000"/><rect x="5" y="65" width="30" height="30" fill="none" stroke="#000" stroke-width="3"/><rect x="10" y="70" width="20" height="20" fill="#000"/><rect x="40" y="40" width="20" height="20" fill="#000"/></svg>`;
-  }
-
-  document.getElementById('qrModal').classList.add('open');
-  let secs = 300;
-  clearInterval(qrTimer);
-  qrTimer = setInterval(() => {
-    secs--;
-    document.getElementById('qrCountdown').textContent =
-      String(Math.floor(secs/60)).padStart(2,'0') + ':' + String(secs%60).padStart(2,'0');
-    if (secs <= 0) { clearInterval(qrTimer); closeQR(); showToast('⏰', 'QR expired. Try again.'); }
-  }, 1000);
-
-  // Store order num for after sim pay
-  window._pendingOrderNum = orderNum || ('#ETL-' + String(Math.floor(1000 + Math.random()*9000)));
-}
-
-function simPay() {
-  clearInterval(qrTimer);
-  closeQR();
-  completeOrder(window._pendingOrderNum || ('#ETL-' + String(Math.floor(1000 + Math.random()*9000))));
-}
-
-function closeQR() { document.getElementById('qrModal').classList.remove('open'); clearInterval(qrTimer); }
-
-function completeOrder(orderNum) {
-  document.getElementById('confirmNum').textContent = orderNum || '#ETL-' + String(Math.floor(1000 + Math.random()*9000));
-  document.getElementById('orderContent').style.display = 'none';
-  document.getElementById('confirmPage').style.display = 'block';
-  cart = []; saveCart(); updateCartBadge();
-  showToast('🎉', 'Order placed successfully!');
-}
-
-// ============================================================
-// AUTH
-// ============================================================
-function handleAuth() {
-  if (user) nav('profile');
-  else nav('auth');
-}
-
-async function doLogin() {
-  const email = document.getElementById('loginEmail').value.trim();
-  const pass  = document.getElementById('loginPass').value;
-  if (!email || !pass) { showToast('❌', 'Please enter email and password'); return; }
-
-  const btn = document.getElementById('loginBtn');
-  btn.disabled = true;
-  btn.innerHTML = '<span class="loading-spin"></span> Signing in...';
-
-  const result = await apiFetch('/api/auth', {
-    method: 'POST',
-    body: JSON.stringify({ action: 'login', email, password: pass }),
-  });
-
-  btn.disabled = false;
-  btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Sign In';
-
-  if (result && result.token) {
-    user = { ...result.user, token: result.token };
-    localStorage.setItem('egoys_user', JSON.stringify(user));
-    updateAuthBtn();
-    updateDashboardVisibility();
-    showToast('✅', `Welcome back, ${result.user.name}!`);
-    if (result.user.role === 'admin') {
-      document.getElementById('adminTopbar').style.display = 'block';
-      nav('admin');
-    } else {
-      nav('home');
-    }
-  } else {
-    // Fallback local auth
-    const ACCOUNTS = {
-      'admin@egoys.com': { pass: 'admin123', name: 'Aldrin Perez', role: 'admin', av: 'AP' },
-      'guest@egoys.com':  { pass: 'guest123',  name: 'Guest User',  role: 'customer', av: 'GU' },
-    };
-    const acc = ACCOUNTS[email];
-    if (!acc || acc.pass !== pass) { showToast('❌', 'Invalid email or password'); return; }
-    user = { email, name: acc.name, role: acc.role, av: acc.av };
-    localStorage.setItem('egoys_user', JSON.stringify(user));
-    updateAuthBtn();
-    updateDashboardVisibility();
-    showToast('✅', `Welcome back, ${acc.name}!`);
-    if (acc.role === 'admin') { document.getElementById('adminTopbar').style.display = 'block'; nav('admin'); }
-    else nav('home');
-  }
-}
-
-async function doRegister() {
-  const fname = document.getElementById('reg-fname')?.value.trim();
-  const lname = document.getElementById('reg-lname')?.value.trim();
-  const email = document.getElementById('reg-email')?.value.trim();
-  const phone = document.getElementById('reg-phone')?.value.trim();
-  const pass  = document.getElementById('reg-pass')?.value;
-  if (!fname || !email || !pass) { showToast('❌', 'Please fill in required fields'); return; }
-  if (pass.length < 8) { showToast('❌', 'Password must be at least 8 characters'); return; }
-
-  const btn = document.getElementById('registerBtn');
-  btn.disabled = true;
-  btn.innerHTML = '<span class="loading-spin"></span> Creating account...';
-
-  const result = await apiFetch('/api/auth', {
-    method: 'POST',
-    body: JSON.stringify({ action: 'register', email, password: pass, full_name: `${fname} ${lname}`, phone }),
-  });
-
-  btn.disabled = false;
-  btn.innerHTML = '<i class="fas fa-user-plus"></i> Create Account';
-
-  if (result && result.token) {
-    user = { ...result.user, token: result.token };
-    localStorage.setItem('egoys_user', JSON.stringify(user));
-    updateAuthBtn();
-    showToast('✅', `Welcome to Egoy's, ${result.user.name}!`);
-    nav('home');
-  } else {
-    showToast('✅', 'Account created! Welcome to Egoy\'s!');
-    authTab('login', document.querySelector('.auth-tab'));
-  }
-}
-
-function doLogout() {
-  user = null;
-  localStorage.removeItem('egoys_user');
-  updateAuthBtn();
+  
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   updateDashboardVisibility();
-  document.getElementById('adminTopbar').style.display = 'none';
-  showToast('👋', 'Logged out');
-  nav('home');
 }
 
-function updateAuthBtn() {
-  const btn  = document.getElementById('authBtn');
-  const icon = document.getElementById('authIcon');
-  const txt  = document.getElementById('authTxt');
-  if (user) {
-    icon.className = '';
-    txt.textContent = user.av || user.name?.slice(0,2).toUpperCase() || 'U';
-    btn.style.background = user.role === 'admin' ? 'var(--red)' : 'var(--gray)';
-  } else {
-    icon.className = 'fas fa-user';
-    txt.textContent = 'Login';
-    btn.style.background = '';
-  }
-}
-
-function updateProfileUI() {
-  if (!user) return;
-  document.getElementById('profAv').textContent = user.av || 'U';
-  document.getElementById('profName').textContent = user.name || 'User';
-  document.getElementById('profRole').textContent = user.role === 'admin' ? '👑 Admin' : 'Customer';
-}
-
-function fillLogin(email, pass) {
-  document.getElementById('loginEmail').value = email;
-  document.getElementById('loginPass').value = pass;
-}
-
-function authTab(tab, btn) {
-  document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('af-' + tab).classList.add('active');
-}
-
-function socialLogin(provider) {
-  const name = provider === 'facebook' ? 'Facebook' : 'Google';
-  user = { email: `user@${provider}.com`, name: `${name} User`, role: 'customer', av: name[0]+'U' };
-  localStorage.setItem('egoys_user', JSON.stringify(user));
-  updateAuthBtn(); updateDashboardVisibility();
-  showToast('✅', `Signed in with ${name}!`);
-  nav('home');
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
 }
 
 function updateDashboardVisibility() {
-  const dash = document.getElementById('dashboardSection');
-  if (dash) dash.style.display = (user && user.role === 'admin') ? 'block' : 'none';
+  const isUserAdmin = user && user.role === 'admin';
+  document.getElementById('adminTopbar').style.display = isUserAdmin ? 'block' : 'none';
+  
+  // Hide or display individual admin sections depending on system state context
+  const targetPanel = document.getElementById(`adm-panel-${currentActiveAdminPanel}`);
+  if(targetPanel) {
+     targetPanel.style.display = (isUserAdmin && (currentActivePage === 'home' || currentActivePage === 'menu')) ? 'block' : 'none';
+  }
 }
 
-// ============================================================
-// ORDER HISTORY
-// ============================================================
-async function loadOrderHistory() {
-  const list = document.getElementById('orderHistoryList');
-  if (!user) { list.innerHTML = '<p style="color:var(--text4)">Please log in to see your orders.</p>'; return; }
+function switchAdminPanel(panelId, btn) {
+  currentActiveAdminPanel = panelId;
+  document.querySelectorAll('.admin-nav-btn').forEach(b => b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  
+  document.querySelectorAll('.adm-panel').forEach(p => p.style.display = 'none');
+  const activePanel = document.getElementById(`adm-panel-${panelId}`);
+  if(activePanel) activePanel.style.display = 'block';
 
-  const orders = await apiFetch('/api/orders?user=me');
-  if (orders && orders.length) {
-    list.innerHTML = orders.map(o => `
-      <div class="order-hist-card">
-        <div class="ohc-hd">
-          <div>
-            <div class="oh-id">${o.order_number}</div>
-            <div style="font-size:15px;font-weight:600;margin-top:3px">${(o.items||[]).map(i=>`${i.item_emoji||'🍽️'} ${i.item_name} ×${i.quantity}`).join(', ')||'Items'}</div>
-          </div>
-          <span class="oh-status ${o.status==='delivered'?'delivered':'processing'}">${o.status}</span>
-        </div>
-        <div class="oh-items">${(o.items||[]).length} items • ${o.order_type}</div>
-        <div class="oh-total">
-          <span>${new Date(o.created_at).toLocaleDateString('en-PH',{month:'long',day:'numeric',year:'numeric'})}</span>
-          <span style="color:var(--yellow)">₱${o.total}</span>
+  if (panelId === 'orders') loadAdminOrders();
+  if (panelId === 'menu') renderAdminMenuTable();
+}
+
+// RENDERING INTERFACES
+function renderHeroItems() {
+  const displayItems = menuData.slice(0, 3);
+  document.getElementById('heroItemsBody').innerHTML = displayItems.map(item => `
+    <div class="hero-item">
+      <div class="hero-item-emoji">${item.emoji || '🍽️'}</div>
+      <div>
+        <div class="hero-item-name">${item.name}</div>
+        <div class="hero-item-desc">${item.description || item.desc || ''}</div>
+      </div>
+      <div class="hero-item-price">P${item.price}</div>
+    </div>
+  `).join('');
+}
+
+function renderBestSellers() {
+  const bests = menuData.filter(i => i.category === 'bestseller' || i.cat === 'bestseller' || i.id <= 2);
+  document.getElementById('bestSellersBody').innerHTML = bests.map(item => `
+    <div class="food-card" onclick="navigateTo('menu')">
+      <div class="food-card-img">
+        ${item.image_url || item.img ? `<img src="${item.image_url || item.img}">` : item.emoji}
+        <div class="food-badge">Sikat / Best</div>
+      </div>
+      <div class="food-card-body">
+        <div class="food-card-name">${item.name}</div>
+        <div class="food-card-desc">${item.description || item.desc || ''}</div>
+        <div class="food-card-ft">
+          <div class="food-card-price">P${item.price}</div>
+          <button class="add-btn" onclick="event.stopPropagation(); addItemToCartById(${item.id})"><i class="fas fa-plus"></i></button>
         </div>
       </div>
-    `).join('');
-  } else {
-    // Fallback static data
-    list.innerHTML = `
-      <div class="order-hist-card"><div class="ohc-hd"><div><div class="oh-id">#ETL-0039</div><div style="font-size:15px;font-weight:600;margin-top:3px">LiempoSiLog ×1, Unli Lugaw ×1</div></div><span class="oh-status delivered">Delivered</span></div><div class="oh-items">2 items • Delivery</div><div class="oh-total"><span>May 20, 2026</span><span style="color:var(--yellow)">₱168</span></div></div>
-      <div class="order-hist-card"><div class="ohc-hd"><div><div class="oh-id">#ETL-0031</div><div style="font-size:15px;font-weight:600;margin-top:3px">TapsiLog ×2, Extra Egg ×2</div></div><span class="oh-status delivered">Delivered</span></div><div class="oh-items">4 items • Dine-in</div><div class="oh-total"><span>May 18, 2026</span><span style="color:var(--yellow)">₱200</span></div></div>
+    </div>
+  `).join('');
+}
+
+function renderMenuGrid(filteredItems = menuData) {
+  document.getElementById('menuGridBody').innerHTML = filteredItems.map(item => {
+    const cartItem = cart.find(c => c.id === item.id);
+    const qty = cartItem ? cartItem.qty : 0;
+    return `
+      <div class="menu-card">
+        <div class="menu-card-img">
+          ${item.image_url || item.img ? `<img src="${item.image_url || item.img}">` : item.emoji}
+          <div class="menu-cat-badge">${item.category || item.cat}</div>
+          ${(item.category==='bestseller'||item.cat==='bestseller') ? `<div class="menu-best-badge">⭐ Top</div>`:''}
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">${item.name}</div>
+          <div class="menu-card-desc">${item.description || item.desc || ''}</div>
+          <div class="menu-card-ft">
+            <div class="menu-price">P${item.price}</div>
+            <div class="qty-ctrl">
+              ${qty > 0 ? `
+                <button class="qty-btn" onclick="updateItemQuantity(${item.id}, -1)"><i class="fas fa-minus"></i></button>
+                <div class="qty-num">${qty}</div>
+              ` : ''}
+              <button class="qty-btn" onclick="updateItemQuantity(${item.id}, 1)"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
     `;
+  }).join('');
+}
+
+function filterMenu(cat, btn) {
+  document.querySelectorAll('#menuFilters .f-btn').forEach(b => b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  
+  if (cat === 'all') {
+    renderMenuGrid(menuData);
+  } else {
+    const target = menuData.filter(i => i.category === cat || i.cat === cat);
+    renderMenuGrid(target);
   }
 }
 
 // ============================================================
-// ADMIN
+// ADMIN: RENDERING MENU WITH BASE64 IMAGE UPLOAD LOGIC
 // ============================================================
-function renderAdminMenu() {
-  document.getElementById('adminMenuBody').innerHTML = menuData.map(item => `
+function renderAdminMenuTable() {
+  document.getElementById('adminMenuTableBody').innerHTML = menuData.map(item => `
     <tr id="ar-${item.id}">
       <td>
-        <div class="img-upload-box" title="Click to change image" id="imgBox-${item.id}">
-          ${item.image_url||item.img ? `<img src="${item.image_url||item.img}" id="imgPrev-${item.id}">` : `<span id="imgPrev-${item.id}" style="font-size:22px">${item.emoji}</span>`}
-          <input type="file" accept="image/*" onchange="uploadImg(${item.id},this)">
+        <div class="img-upload-box" title="Click to change image" id="imgBox-${item.id}" onclick="document.getElementById('fileInput-${item.id}').click()">
+          ${item.image_url || item.img ? 
+            `<img src="${item.image_url || item.img}" id="imgPrev-${item.id}">` : 
+            `<span id="imgPrev-${item.id}" style="font-size:22px">${item.emoji || '🍽️'}</span>`
+          }
+          <input type="file" id="fileInput-${item.id}" accept="image/*" style="display:none" onchange="uploadMenuImage(${item.id}, this)">
         </div>
       </td>
-      <td><input class="edit-field" style="width:150px" value="${item.name}" id="an-${item.id}"></td>
+      <td><input class="fi btn-sm" style="font-weight:700" value="${item.name}" id="an-${item.id}"></td>
       <td>
-        <select class="edit-field" id="ac-${item.id}" style="width:110px">
-          <option value="bestseller" ${(item.category||item.cat)==='bestseller'?'selected':''}>Bestseller</option>
-          <option value="tapsilog" ${(item.category||item.cat)==='tapsilog'?'selected':''}>Tapsilog</option>
-          <option value="lugaw" ${(item.category||item.cat)==='lugaw'?'selected':''}>Lugaw</option>
-          <option value="addon" ${(item.category||item.cat)==='addon'?'selected':''}>Add-on</option>
+        <select class="fi btn-sm" id="ac-${item.id}">
+          <option value="bestseller" ${(item.category||item.cat)==='bestseller'?'selected':''}>⭐ Best Seller</option>
+          <option value="tapsilog" ${(item.category||item.cat)==='tapsilog'?'selected':''}>🍳 Tapsilog</option>
+          <option value="lugaw" ${(item.category||item.cat)==='lugaw'?'selected':''}>🍚 Lugaw</option>
+          <option value="addon" ${(item.category||item.cat)==='addon'?'selected':''}>➕ Add-On</option>
         </select>
       </td>
-      <td><input class="edit-field" style="width:70px" type="number" value="${item.price}" id="ap-${item.id}"></td>
-      <td><input class="edit-field" style="width:210px" value="${item.description||item.desc}" id="ad-${item.id}"></td>
+      <td><input class="fi btn-sm" style="width:80px;color:var(--yellow);font-weight:800" type="number" value="${item.price}" id="ap-${item.id}"></td>
+      <td><input class="fi btn-sm" style="width:50px;text-align:center" value="${item.emoji || '🍽️'}" id="ae-${item.id}"></td>
+      <td><input class="fi btn-sm" value="${item.description || item.desc || ''}" id="ad-${item.id}"></td>
       <td>
-        <div class="action-btns">
-          <button class="btn btn-sm btn-primary" onclick="saveItem(${item.id})"><i class="fas fa-save"></i></button>
-          <button class="btn btn-sm btn-outline" onclick="delItem(${item.id})" style="border-color:var(--red);color:var(--red)"><i class="fas fa-trash"></i></button>
+        <div style="display:flex;gap:6px">
+          <button class="btn btn-primary btn-sm" onclick="saveAdminItem(${item.id})"><i class="fas fa-save"></i></button>
+          <button class="btn btn-outline btn-sm" onclick="deleteAdminItem(${item.id})"><i class="fas fa-trash"></i></button>
         </div>
       </td>
     </tr>
   `).join('');
 }
 
-async function uploadImg(id, input) {
+// ====== CONVERT TO BASE64 & POST TO MENU-IMAGE.JS BACKEND ======
+async function uploadMenuImage(itemId, input) {
   const file = input.files[0];
   if (!file) return;
+
+  // Visual feedback habang nag-lo-load
+  const imgBox = document.getElementById(`imgBox-${itemId}`);
+  imgBox.style.opacity = '0.5';
+
   const reader = new FileReader();
-  reader.onload = async e => {
-    const item = menuData.find(i => i.id == id);
-    item.image_url = e.target.result;
-    const box = document.getElementById('imgPrev-' + id);
-    if (box && box.tagName === 'IMG') box.src = e.target.result;
-    else if (box) { box.outerHTML = `<img src="${e.target.result}" id="imgPrev-${id}" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-sm)">`; }
-    localStorage.setItem('egoys_menu', JSON.stringify(menuData));
+  reader.onload = async function(e) {
+    const base64String = e.target.result; // Dito naitatabi ang base64 data url
 
-    // Upload via Vercel API as base64 JSON
-    if (user?.token) {
-      try {
-        const result = await apiFetch(`/api/menu-image?id=${id}`, {
-          method: 'POST',
-          body: JSON.stringify({ image_url: e.target.result }),
-        });
-        if (result && result.image_url) item.image_url = result.image_url;
-      } catch (e) { /* offline fallback ok */ }
-    }
-    showToast('🖼️', 'Image updated!');
-  };
-  reader.readAsDataURL(file);
-}
-
-async function saveItem(id) {
-  const item = menuData.find(i => i.id == id);
-  item.name        = document.getElementById('an-' + id).value;
-  item.category    = document.getElementById('ac-' + id).value;
-  item.cat         = item.category;
-  item.price       = parseInt(document.getElementById('ap-' + id).value) || 0;
-  item.description = document.getElementById('ad-' + id).value;
-  item.desc        = item.description;
-  localStorage.setItem('egoys_menu', JSON.stringify(menuData));
-
-  await apiFetch(`/api/menu/${id}`, {
-    method: 'PUT',
-    body: JSON.stringify({ name:item.name, category:item.category, price:item.price, description:item.description, emoji:item.emoji }),
-  });
-
-  showToast('✅', 'Item updated!');
-  renderBestSellers(); renderHeroItems();
-}
-
-async function delItem(id) {
-  if (!confirm('Delete this menu item?')) return;
-  menuData = menuData.filter(i => i.id != id);
-  localStorage.setItem('egoys_menu', JSON.stringify(menuData));
-  await apiFetch(`/api/menu?id=${id}`, { method: 'DELETE' });
-  renderAdminMenu();
-  showToast('🗑️', 'Item deleted');
-}
-
-async function addMenuItem() {
-  const newId = (Math.max(...menuData.map(i => i.id)) || 0) + 1;
-  const newItem = { id: newId, name: 'New Item', category: 'tapsilog', cat: 'tapsilog', price: 80, emoji: '🍽️', description: 'New menu item', desc: 'New menu item', image_url: '', img: '' };
-  menuData.push(newItem);
-  localStorage.setItem('egoys_menu', JSON.stringify(menuData));
-  await apiFetch('/api/menu', { method: 'POST', body: JSON.stringify({ name: newItem.name, category: newItem.category, price: newItem.price, description: newItem.description, emoji: newItem.emoji }) });
-  renderAdminMenu();
-  showToast('✅', 'New item added — edit and save!');
-}
-
-async function loadAdminOrders() {
-  const orders = await apiFetch('/api/orders');
-  const tbody = document.getElementById('adminOrdersBody');
-  if (orders && orders.length) {
-    tbody.innerHTML = orders.map(o => `
-      <tr>
-        <td style="font-family:monospace">${o.order_number}</td>
-        <td>${o.customer_name || 'Walk-in'}</td>
-        <td>${(o.items||[]).slice(0,2).map(i=>`${i.item_name} ×${i.quantity}`).join(', ')||'—'}</td>
-        <td>${o.order_type}</td>
-        <td style="color:var(--yellow);font-weight:700">₱${o.total}</td>
-        <td><span class="oh-status ${o.status==='delivered'?'delivered':'processing'}">${o.status}</span></td>
-        <td style="color:var(--text4)">${new Date(o.created_at).toLocaleTimeString('en-PH',{hour:'2-digit',minute:'2-digit'})}</td>
-      </tr>
-    `).join('');
-  } else {
-    tbody.innerHTML = `
-      <tr><td style="font-family:monospace">#ETL-0042</td><td>Maria Santos</td><td>LiempoSiLog ×2</td><td>Delivery</td><td style="color:var(--yellow);font-weight:700">₱198</td><td><span class="oh-status delivered">Delivered</span></td><td style="color:var(--text4)">2:30 AM</td></tr>
-      <tr><td style="font-family:monospace">#ETL-0041</td><td>Jose Reyes</td><td>Unli Lugaw ×3, TapsiLog ×1</td><td>Pickup</td><td style="color:var(--yellow);font-weight:700">₱262</td><td><span class="oh-status processing">Processing</span></td><td style="color:var(--text4)">2:15 AM</td></tr>
-    `;
-  }
-}
-
-// ============================================================
-// BIZ CONFIG (Admin CMS)
-// ============================================================
-function populateAdminFields() {
-  const set = (id, val) => { const el = document.getElementById(id); if (el) el.value = val || ''; };
-  set('biz-name',    bizConfig.biz_name    || "Egoy's Tapsihan Lugawan");
-  set('biz-tag',     bizConfig.biz_tag     || '24/7 Tapsilugan at Unlimited Lugawan');
-  set('biz-phone',   bizConfig.biz_phone   || '+63 917 XXX XXXX');
-  set('biz-addr',    bizConfig.biz_addr    || '123 Quirino Highway, QC');
-  set('biz-email',   bizConfig.biz_email   || 'egoys@tapsihan.ph');
-  set('biz-gcash',   bizConfig.biz_gcash   || '09XX XXX XXXX');
-  set('biz-story',   bizConfig.biz_story   || '');
-  set('biz-mission', bizConfig.biz_mission || '');
-  set('biz-vision',  bizConfig.biz_vision  || '');
-  if (bizConfig.img_logo) {
-    const prev = document.getElementById('logoPreview');
-    if (prev) prev.outerHTML = `<img id="logoPreview" src="${bizConfig.img_logo}" style="width:100%;height:100%;object-fit:cover;border-radius:6px">`;
-  }
-  if (bizConfig.img_gcash_qr || bizConfig.gcashQR) showQRPreview('gcash', bizConfig.img_gcash_qr || bizConfig.gcashQR);
-  if (bizConfig.img_maya_qr  || bizConfig.mayaQR)  showQRPreview('maya',  bizConfig.img_maya_qr  || bizConfig.mayaQR);
-}
-
-function showQRPreview(type, src) {
-  const prev = document.getElementById(type + 'QRPreview');
-  if (!prev) return;
-  prev.innerHTML = `<img src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:8px;background:#fff;border-radius:var(--r-sm)">`;
-}
-
-function uploadLogo(input) {
-  const file = input.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = e => {
-    bizConfig.img_logo = e.target.result;
-    const prev = document.getElementById('logoPreview');
-    if (prev && prev.tagName === 'IMG') prev.src = e.target.result;
-    else if (prev) prev.outerHTML = `<img id="logoPreview" src="${e.target.result}" style="width:100%;height:100%;object-fit:cover;border-radius:6px">`;
-    localStorage.setItem('egoys_biz', JSON.stringify(bizConfig));
-    showToast('🖼️', 'Logo updated!');
-  };
-  reader.readAsDataURL(file);
-}
-
-function uploadQR(type, input) {
-  const file = input.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = e => {
-    const key = type === 'gcash' ? 'img_gcash_qr' : 'img_maya_qr';
-    bizConfig[key] = e.target.result;
-    showQRPreview(type, e.target.result);
-    localStorage.setItem('egoys_biz', JSON.stringify(bizConfig));
-    showToast('📱', `${type === 'gcash' ? 'GCash' : 'Maya'} QR updated!`);
-  };
-  reader.readAsDataURL(file);
-}
-
-async function saveBizInfo() {
-  const get = id => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
-  const updates = {
-    biz_name:    get('biz-name'),
-    biz_tag:     get('biz-tag'),
-    biz_phone:   get('biz-phone'),
-    biz_addr:    get('biz-addr'),
-    biz_email:   get('biz-email'),
-    biz_gcash:   get('biz-gcash'),
-    biz_story:   get('biz-story'),
-    biz_mission: get('biz-mission'),
-    biz_vision:  get('biz-vision'),
-  };
-  Object.assign(bizConfig, updates);
-  localStorage.setItem('egoys_biz', JSON.stringify(bizConfig));
-  await apiFetch('/api/config', { method: 'POST', body: JSON.stringify(updates) });
-  showToast('✅', 'All changes saved!');
-}
-
-// ============================================================
-// LOAD REMOTE CONFIG
-// ============================================================
-async function loadConfig() {
-  const config = await apiFetch('/api/config');
-  if (config) {
-    Object.assign(bizConfig, config);
-    localStorage.setItem('egoys_biz', JSON.stringify(bizConfig));
-    // Update footer founded year
-    if (config.founded_year) {
-      document.querySelectorAll('.footer-brand p').forEach(p => {
-        p.textContent = p.textContent.replace(/since \d{4}/, `since ${config.founded_year}`);
+    try {
+      // I-POST ang Base64 string sa iyong Node.js/Vercel API (/api/menu-image)
+      const response = await apiFetch('/api/menu-image', {
+        method: 'POST',
+        body: JSON.stringify({
+          menuId: itemId,
+          base64Image: base64String // Ipinapasa ang string sa backend server
+        })
       });
+
+      // Kung gumana ang upload sa backend at may ibinalik na public url galing Supabase Storage
+      if (response && response.imageUrl) {
+        // I-update ang LocalState ng menuData
+        const item = menuData.find(i => i.id === itemId);
+        if (item) {
+          item.image_url = response.imageUrl;
+          item.img = response.imageUrl; // Parehong pag-aari para iwas property conflict
+        }
+        localStorage.setItem('egoys_menu', JSON.stringify(menuData));
+
+        // Palitan agad ang preview nang hindi nagre-refresh ang buong admin table
+        imgBox.innerHTML = `<img src="${response.imageUrl}" id="imgPrev-${itemId}">
+                            <input type="file" id="fileInput-${itemId}" accept="image/*" style="display:none" onchange="uploadMenuImage(${itemId}, this)">`;
+        
+        // I-update ang iba pang display
+        renderMenuGrid();
+        renderBestSellers();
+        renderHeroItems();
+        
+        showToast('📸', 'Ulam image updated successfully!');
+      } else {
+        showToast('❌', 'Failed to upload image to Supabase.');
+      }
+    } catch (err) {
+      console.error(err);
+      showToast('❌', 'Error uploading image.');
+    } finally {
+      imgBox.style.opacity = '1';
     }
+  };
+
+  reader.onerror = function() {
+    showToast('❌', 'Error reading file.');
+    imgBox.style.opacity = '1';
+  };
+
+  // Binabasa na ang file bilang isang mahabang string!
+  reader.readAsDataURL(file);
+}
+
+async function saveAdminItem(id) {
+  const payload = {
+    id: id,
+    name: document.getElementById(`an-${id}`).value,
+    category: document.getElementById(`ac-${id}`).value,
+    cat: document.getElementById(`ac-${id}`).value,
+    price: parseFloat(document.getElementById(`ap-${id}`).value) || 0,
+    emoji: document.getElementById(`ae-${id}`).value,
+    description: document.getElementById(`ad-${id}`).value,
+    desc: document.getElementById(`ad-${id}`).value
+  };
+  
+  // Hanapin at panatilihin ang kasalukuyang image link para hindi mawala kapag nag-save
+  const existingItem = menuData.find(i => i.id === id);
+  if (existingItem) {
+    payload.image_url = existingItem.image_url || existingItem.img || "";
+    payload.img = existingItem.image_url || existingItem.img || "";
+  }
+
+  const res = await apiFetch('/api/menu', { method: 'POST', body: JSON.stringify(payload) });
+  const index = menuData.findIndex(i => i.id === id);
+  if (index !== -1) menuData[index] = { ...menuData[index], ...payload };
+  
+  localStorage.setItem('egoys_menu', JSON.stringify(menuData));
+  renderMenuGrid();
+  renderBestSellers();
+  renderHeroItems();
+  showToast('💾', 'Dish item schema updated successfully!');
+}
+
+async function deleteAdminItem(id) {
+  if(!confirm("Are you sure you want to delete this menu item?")) return;
+  await apiFetch('/api/menu', { method: 'DELETE', body: JSON.stringify({ id }) });
+  menuData = menuData.filter(i => i.id !== id);
+  localStorage.setItem('egoys_menu', JSON.stringify(menuData));
+  renderAdminMenuTable();
+  renderMenuGrid();
+  showToast('🗑️', 'Dish removed from active index.');
+}
+
+function addNewAdminMenuItem() {
+  const newId = menuData.length > 0 ? Math.max(...menuData.map(i => i.id)) + 1 : 1;
+  const newItem = { id: newId, name: 'Bagong Lutong Ulam', price: 100, emoji: '🍽️', img: '', cat: 'tapsilog', description: 'Masarap at bagong ulam.', category: 'tapsilog', image_url: '' };
+  menuData.push(newItem);
+  renderAdminMenuTable();
+}
+
+async function saveGlobalConfig() {
+  const fee = parseFloat(document.getElementById('cfgDelFee').value) || 0;
+  const gcash = document.getElementById('cfgGcashPhone').value;
+  const maya = document.getElementById('cfgMayaPhone').value;
+  
+  globalConfig = { deliveryFee: fee, gcashPhone: gcash, mayaPhone: maya };
+  localStorage.setItem('egoys_config', JSON.stringify(globalConfig));
+  
+  await apiFetch('/api/config', { method: 'POST', body: JSON.stringify(globalConfig) });
+  showToast('⚙️', 'Global network primitives saved.');
+}
+
+// BINDING CART INTERACTIONS
+function toggleCart() {
+  document.getElementById('cartOverlay').classList.toggle('open');
+  renderCartPanel();
+}
+
+function updateItemQuantity(id, change) {
+  const cartItem = cart.find(c => c.id === id);
+  if (cartItem) {
+    cartItem.qty += change;
+    if (cartItem.qty <= 0) cart = cart.filter(c => c.id !== id);
+  } else if (change > 0) {
+    const item = menuData.find(m => m.id === id);
+    if(item) cart.push({ id: item.id, name: item.name, price: item.price, emoji: item.emoji, qty: 1 });
+  }
+  updateCartBadge();
+  renderMenuGrid();
+}
+
+function addItemToCartById(id) {
+  updateItemQuantity(id, 1);
+  showToast('🛒', 'Item added to chibog basket.');
+}
+
+function updateCartBadge() {
+  const totalQty = cart.reduce((acc, curr) => acc + curr.qty, 0);
+  const badge = document.getElementById('cartBadge');
+  if (totalQty > 0) {
+    badge.textContent = totalQty;
+    badge.style.display = 'flex';
+  } else {
+    badge.style.display = 'none';
   }
 }
 
-// ============================================================
-// MOBILE
-// ============================================================
-function toggleMobile() { document.getElementById('mobileMenu').classList.toggle('open'); }
-function closeMobile()  { document.getElementById('mobileMenu').classList.remove('open'); }
+function renderCartPanel() {
+  const container = document.getElementById('cartBodyContainer');
+  if (cart.length === 0) {
+    container.innerHTML = `<div class="cart-empty"><i class="fas fa-shopping-basket"></i><strong>Walang Laman ang Basket</strong><p style="font-size:13px;margin-top:4px">Pumunta sa Menu at magdagdag ng pagkain.</p></div>`;
+    document.getElementById('cartSubtotalValue').textContent = "P0.00";
+    document.getElementById('cartTotalValue').textContent = "P0.00";
+    return;
+  }
 
-// ============================================================
-// TOAST
-// ============================================================
-let toastTimer;
+  container.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <div class="cart-item-emoji">${item.emoji}</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-unit">P${item.price} bawat isa</div>
+        <div class="cart-item-ctrl">
+          <button class="qty-btn" onclick="updateItemQuantity(${item.id}, -1); renderCartPanel()"><i class="fas fa-minus"></i></button>
+          <div class="qty-num">${item.qty}</div>
+          <button class="qty-btn" onclick="updateItemQuantity(${item.id}, 1); renderCartPanel()"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+      <div class="cart-item-total">P${item.price * item.qty}</div>
+    </div>
+  `).join('');
+
+  const subtotal = cart.reduce((acc, curr) => acc + (curr.price * curr.qty), 0);
+  document.getElementById('cartSubtotalValue').textContent = `P${subtotal.toFixed(2)}`;
+  document.getElementById('cartTotalValue').textContent = `P${subtotal.toFixed(2)}`;
+}
+
+function goToCheckoutPage() {
+  if (cart.length === 0) {
+    alert("Bawal mag-checkout ng walang laman ang basket!");
+    return;
+  }
+  toggleCart();
+  navigateTo('checkout');
+  renderCheckoutSummary();
+}
+
+// CHECKOUT LOGIC ENGINE
+function setOrderType(type) {
+  selectedOrderType = type;
+  document.getElementById('ot-delivery').classList.toggle('sel', type === 'delivery');
+  document.getElementById('ot-pickup').classList.toggle('sel', type === 'pickup');
+  document.getElementById('deliveryAddressGroup').style.display = type === 'delivery' ? 'block' : 'none';
+  
+  // Free container fee structure config override mapping
+  const fee = type === 'delivery' ? globalConfig.deliveryFee : 0;
+  document.getElementById('coDeliveryFee').textContent = `P${fee.toFixed(2)}`;
+  document.getElementById('coDelRow').style.display = type === 'delivery' ? 'flex' : 'none';
+  recalculateCheckoutTotals();
+}
+
+function setPaymentMethod(method) {
+  selectedPaymentMethod = method;
+  document.getElementById('pm-gcash').classList.toggle('sel', method === 'gcash');
+  document.getElementById('pm-maya').classList.toggle('sel', method === 'maya');
+  document.getElementById('pm-cash').classList.toggle('sel', method === 'cash');
+}
+
+function renderCheckoutSummary() {
+  const container = document.getElementById('checkoutSummaryItems');
+  container.innerHTML = cart.map(item => `
+    <div class="osm-item">
+      <div><span class="osm-qty">${item.qty}x</span><strong>${item.name}</strong></div>
+      <div style="font-weight:700">P${item.price * item.qty}</div>
+    </div>
+  `).join('');
+
+  if(user) {
+    document.getElementById('coName').value = user.name || '';
+    document.getElementById('coPhone').value = user.phone || '';
+    document.getElementById('coAddress').value = user.address || '';
+  }
+  
+  setOrderType(selectedOrderType);
+}
+
+function recalculateCheckoutTotals() {
+  const subtotal = cart.reduce((acc, curr) => acc + (curr.price * curr.qty), 0);
+  const fee = selectedOrderType === 'delivery' ? globalConfig.deliveryFee : 0;
+  const total = subtotal + fee;
+
+  document.getElementById('coSubtotal').textContent = `P${subtotal.toFixed(2)}`;
+  document.getElementById('coTotal').textContent = `P${total.toFixed(2)}`;
+}
+
+function processCheckoutSubmit() {
+  const name = document.getElementById('coName').value.trim();
+  const phone = document.getElementById('coPhone').value.trim();
+  const address = document.getElementById('coAddress').value.trim();
+  const notes = document.getElementById('coNotes').value.trim();
+
+  if (!name || !phone || (selectedOrderType === 'delivery' && !address)) {
+    alert("Mangyaring punan ang lahat ng kinakailangang impormasyon!");
+    return;
+  }
+
+  const subtotal = cart.reduce((acc, curr) => acc + (curr.price * curr.qty), 0);
+  const fee = selectedOrderType === 'delivery' ? globalConfig.deliveryFee : 0;
+  
+  currentPendingOrderPayload = {
+    id: 'EGY-' + Math.floor(10000 + Math.random() * 90000),
+    date: new Date().toLocaleDateString(),
+    time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+    customerName: name,
+    phone: phone,
+    address: selectedOrderType === 'delivery' ? address : 'STORE PICKUP',
+    notes: notes,
+    items: [...cart],
+    totalAmount: subtotal + fee,
+    orderType: selectedOrderType,
+    paymentMethod: selectedPaymentMethod,
+    status: 'pending'
+  };
+
+  if (selectedPaymentMethod === 'cash') {
+    completeOrderPlacement();
+  } else {
+    openDigitalPaymentGateway();
+  }
+}
+
+function openDigitalPaymentGateway() {
+  const totalAmount = currentPendingOrderPayload.totalAmount;
+  document.getElementById('qrModalAmount').textContent = `P${totalAmount.toFixed(2)}`;
+  document.getElementById('qrModalTitle').textContent = selectedPaymentMethod === 'gcash' ? 'GCash App QR Terminal' : 'Maya Digital QR Gateway';
+  
+  const phoneTarget = selectedPaymentMethod === 'gcash' ? globalConfig.gcashPhone : globalConfig.mayaPhone;
+  document.getElementById('qrModalNote').textContent = `Mag-send ng P${totalAmount.toFixed(2)} sa ${phoneTarget} o gamitin ang simulated verification tag sa ibaba.`;
+
+  // Draw adaptive vector simulation QR
+  const colorHex = selectedPaymentMethod === 'gcash' ? '#0078FF' : '#00C170';
+  document.getElementById('qrCodeContainer').innerHTML = `
+    <svg viewBox="0 0 100 100">
+      <rect x="0" y="0" width="100" height="100" fill="none"/>
+      <rect x="10" y="10" width="25" height="25" fill="${colorHex}"/>
+      <rect x="13" y="13" width="19" height="19" fill="white"/>
+      <rect x="16" y="16" width="13" height="13" fill="${colorHex}"/>
+      <rect x="65" y="10" width="25" height="25" fill="${colorHex}"/>
+      <rect x="68" y="13" width="19" height="19" fill="white"/>
+      <rect x="71" y="16" width="13" height="13" fill="${colorHex}"/>
+      <rect x="10" y="65" width="25" height="25" fill="${colorHex}"/>
+      <rect x="13" y="68" width="19" height="19" fill="white"/>
+      <rect x="16" y="71" width="13" height="13" fill="${colorHex}"/>
+      <rect x="45" y="45" width="10" height="10" fill="${colorHex}"/>
+      <rect x="50" y="20" width="5" height="15" fill="${colorHex}"/>
+      <rect x="25" y="50" width="15" height="5" fill="${colorHex}"/>
+      <rect x="70" y="55" width="15" height="15" fill="${colorHex}"/>
+    </svg>
+  `;
+
+  document.getElementById('qrModal').classList.add('open');
+  
+  let totalSeconds = 300;
+  clearInterval(qrCountdownInterval);
+  qrCountdownInterval = setInterval(() => {
+    totalSeconds--;
+    if(totalSeconds <= 0) {
+      clearInterval(qrCountdownInterval);
+      alert("Payment session expired! Subukang muli.");
+      closeQrModal();
+      return;
+    }
+    const mins = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+    const secs = String(totalSeconds % 60).padStart(2, '0');
+    document.getElementById('qrTimerValue').textContent = `${mins}:${secs}`;
+  }, 1000);
+}
+
+function closeQrModal() {
+  clearInterval(qrCountdownInterval);
+  document.getElementById('qrModal').classList.remove('open');
+}
+
+function simulatePaymentSuccess() {
+  closeQrModal();
+  showToast('💳', 'Simulated e-wallet hook verified successfully.');
+  completeOrderPlacement();
+}
+
+async function completeOrderPlacement() {
+  // Post directly to transactional stream API sink
+  await apiFetch('/api/orders', { method: 'POST', body: JSON.stringify(currentPendingOrderPayload) });
+  
+  // Inject into local active profile orders storage arrays for instant tracking
+  let orders = JSON.parse(localStorage.getItem('egoys_local_orders')) || [];
+  orders.unshift(currentPendingOrderPayload);
+  localStorage.setItem('egoys_local_orders', JSON.stringify(orders));
+
+  // Set visual elements confirmation node bindings
+  document.getElementById('cfNum').textContent = `ORDER ID: #${currentPendingOrderPayload.id}`;
+  document.getElementById('cfEta').textContent = currentPendingOrderPayload.orderType === 'delivery' ? '25-35 Mins' : '10-15 Mins store pick-up';
+  document.getElementById('cfSub').textContent = `Ang iyong order ay natanggap na ng Egoy's main kitchen gamit ang ${currentPendingOrderPayload.paymentMethod.toUpperCase()}. Nagsisimula na kaming magluto.`;
+
+  // Clear instance states
+  cart = [];
+  updateCartBadge();
+  renderMenuGrid();
+  navigateTo('confirm');
+  updateProfileOrdersHistoryUI();
+}
+
+// PROFILE HISTORY UPDATE COMPONENT
+function updateProfileOrdersHistoryUI() {
+  const container = document.getElementById('userOrdersHistoryBody');
+  let orders = JSON.parse(localStorage.getItem('egoys_local_orders')) || [];
+  
+  if (orders.length === 0) {
+    container.innerHTML = `<tr><td colspan="6" style="text-align:center;color:var(--text4);padding:32px">Mag-order muna para makita ang history rito.</td></tr>`;
+    return;
+  }
+
+  container.innerHTML = orders.map(o => {
+    const itemNames = o.items.map(i => `${i.qty}x ${i.name}`).join(', ');
+    return `
+      <tr>
+        <td style="font-family:monospace;font-weight:700;color:var(--yellow)">#${o.id}</td>
+        <td>${o.date} <span style="font-size:12px;color:var(--text4)">${o.time}</span></td>
+        <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${itemNames}">${itemNames}</td>
+        <td style="font-weight:800">P${o.totalAmount}</td>
+        <td><span style="font-size:12px;font-weight:700">${o.orderType.toUpperCase()}</span></td>
+        <td><span class="ord-status ${o.status}">${o.status}</span></td>
+      </tr>
+    `;
+  }).join('');
+}
+
+// ADMINISTRATIVE LAYER INTERACTION ROUTINES
+async function loadAdminOrders() {
+  const data = await apiFetch('/api/orders');
+  let orders = [];
+  if (data && Array.isArray(data)) {
+    orders = data;
+  } else {
+    orders = JSON.parse(localStorage.getItem('egoys_local_orders')) || [];
+  }
+
+  document.getElementById('statPendingOrders').textContent = orders.filter(o => o.status === 'pending' || o.status === 'preparing').length;
+  const totalRev = orders.reduce((acc, curr) => acc + (curr.status !== 'cancelled' ? curr.totalAmount : 0), 0);
+  document.getElementById('statActiveSales').textContent = `P${totalRev}`;
+
+  const container = document.getElementById('adminOrdersTableBody');
+  if(orders.length === 0) {
+     container.innerHTML = `<tr><td colspan="7" style="text-align:center;color:var(--text4);padding:24px">Walang aktwal na order sa kasalukuyan.</td></tr>`;
+     return;
+  }
+
+  container.innerHTML = orders.map(o => `
+    <tr>
+      <td style="font-family:monospace;font-weight:700">#${o.id}</td>
+      <td>${o.time}</td>
+      <td><strong>${o.customerName}</strong><br><span style="font-size:12px;color:var(--text4)">${o.phone}</span><br><span style="font-size:11px;color:var(--text3)">${o.address}</span></td>
+      <td style="font-size:13px">${o.items.map(i => `<span style="color:var(--yellow);font-weight:700">${i.qty}x</span> ${i.name}`).join('<br>')} ${o.notes ? `<br><em style="color:var(--text4)">Note: "${o.notes}"</em>` : ''}</td>
+      <td style="font-weight:800;color:var(--yellow)">P${o.totalAmount}</td>
+      <td><span style="font-size:12px;font-weight:700">${o.paymentMethod.toUpperCase()}</span></td>
+      <td>
+        <select class="fi btn-sm" style="padding:4px 8px;font-size:12px" onchange="updateAdminOrderStatus('${o.id}', this.value)">
+          <option value="pending" ${o.status==='pending'?'selected':''}>Pending</option>
+          <option value="preparing" ${o.status==='preparing'?'selected':''}>Preparing</option>
+          <option value="delivered" ${o.status==='delivered'?'selected':''}>Delivered</option>
+          <option value="cancelled" ${o.status==='cancelled'?'selected':''}>Cancelled</option>
+        </select>
+      </td>
+    </tr>
+  `).join('');
+}
+
+async function updateAdminOrderStatus(orderId, newStatus) {
+  let orders = JSON.parse(localStorage.getItem('egoys_local_orders')) || [];
+  const targetIndex = orders.findIndex(o => o.id === orderId);
+  if(targetIndex !== -1) orders[targetIndex].status = newStatus;
+  localStorage.setItem('egoys_local_orders', JSON.stringify(orders));
+
+  await apiFetch('/api/orders', { method: 'PUT', body: JSON.stringify({ id: orderId, status: newStatus }) });
+  showToast('🔄', `Order status set to ${newStatus}.`);
+  loadAdminOrders();
+  updateProfileOrdersHistoryUI();
+}
+
+// IDENTITY HANDLERS MOCK ENGINE
+function switchAuthTab(tab) {
+  document.getElementById('tabLogin').classList.toggle('active', tab === 'login');
+  document.getElementById('tabRegister').classList.toggle('active', tab === 'register');
+  document.getElementById('formLogin').classList.toggle('active', tab === 'login');
+  document.getElementById('formRegister').classList.toggle('active', tab === 'register');
+}
+
+function fillDemo(email, pass) {
+  document.getElementById('liEmail').value = email;
+  document.getElementById('liPassword').value = pass;
+}
+
+function handleAuthAction(type) {
+  if (type === 'login') {
+    const email = document.getElementById('liEmail').value.trim();
+    if(email.includes('admin')) {
+      user = { name: 'Egoy Owner', email: email, role: 'admin', phone: '09170001111', address: 'Main Hub HQ' };
+    } else {
+      user = { name: 'Suki Customer', email: email, role: 'customer', phone: '09192223333', address: 'Barangay San Juan' };
+    }
+    localStorage.setItem('egoys_user', JSON.stringify(user));
+    showToast('🔑', `Welcome back, ${user.name}!`);
+  } else {
+    user = { name: document.getElementById('rgName').value || 'New Suki', email: document.getElementById('rgEmail').value, role: 'customer', phone: document.getElementById('rgPhone').value, address: '' };
+    localStorage.setItem('egoys_user', JSON.stringify(user));
+    showToast('🎉', 'Account registration complete.');
+  }
+  updateAuthBtn();
+  updateProfileUI();
+  navigateTo('home');
+}
+
+function updateAuthBtn() {
+  const btn = document.getElementById('authBtn');
+  if (user) {
+    btn.innerHTML = `<i class="fas fa-sign-out-alt"></i> <span>Logout</span>`;
+    btn.onclick = () => {
+      localStorage.removeItem('egoys_user');
+      user = null;
+      updateAuthBtn();
+      updateDashboardVisibility();
+      showToast('🚪', 'Logged out safely.');
+      navigateTo('home');
+    };
+  } else {
+    btn.innerHTML = `<i class="fas fa-user"></i> <span>Sign In</span>`;
+    btn.onclick = () => navigateTo('auth');
+  }
+  updateDashboardVisibility();
+}
+
+function updateProfileUI() {
+  if (!user) return;
+  document.getElementById('profileTitle').innerHTML = `Kumusta, <span>${user.name}!</span>`;
+  updateProfileOrdersHistoryUI();
+}
+
+// UTILITY TOAST SYSTEM
+let toastTimer = null;
 function showToast(icon, msg) {
-  const t = document.getElementById('toast');
+  const t = document.getElementById('toastBox');
   document.getElementById('toastIcon').textContent = icon;
   document.getElementById('toastMsg').textContent = msg;
   t.classList.add('show');
@@ -1963,42 +1734,82 @@ function showToast(icon, msg) {
 }
 
 // ============================================================
-// INIT
+// SYSTEM CHARTS SUBMODULE INITIALIZATION
+// ============================================================
+function initCharts() {
+  const ctxSales = document.getElementById('salesChart');
+  if(ctxSales) {
+    new Chart(ctxSales, {
+      type: 'line',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [
+          { label: 'Revenue (x100 PHP)', data: [120, 190, 150, 250, 320, 450, 480], borderColor: '#DC2626', backgroundColor: 'rgba(220,38,38,0.1)', fill: true, tension: 0.3 },
+          { label: 'Orders volume', data: [40, 65, 55, 80, 110, 160, 175], borderColor: '#FBBF24', fill: false, tension: 0.1 }
+        ]
+      },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: '#D1D5DB' } } }, scales: { x: { grid: { color: '#262626' }, ticks: { color: '#9CA3AF' } }, y: { grid: { color: '#262626' }, ticks: { color: '#9CA3AF' } } } }
+    });
+  }
+
+  const ctxCat = document.getElementById('categoryChart');
+  if(ctxCat) {
+    new Chart(ctxCat, {
+      type: 'doughnut',
+      data: {
+        labels: ['Tapsilog', 'Lugaw', 'Add-ons'],
+        datasets: [{ data: [55, 30, 15], backgroundColor: ['#DC2626', '#FBBF24', '#2A2A2A'], borderColor: '#111111', borderWidth: 2 }]
+      },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { color: '#D1D5DB' } } } }
+    });
+  }
+
+  const ctxPeak = document.getElementById('peakChart');
+  if(ctxPeak) {
+    new Chart(ctxPeak, {
+      type: 'bar',
+      data: {
+        labels: ['6AM-10AM', '11AM-2PM', '5PM-9PM', '10PM-3AM'],
+        datasets: [{ label: 'Traffic Density %', data: [45, 70, 60, 95], backgroundColor: '#DC2626', borderRadius: 4 }]
+      },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { display: false }, ticks: { color: '#9CA3AF' } }, y: { grid: { color: '#262626' }, ticks: { color: '#9CA3AF' }, max: 100 } } }
+    });
+  }
+}
+
+// ============================================================
+// INIT ENTRY ENGINE POINT
 // ============================================================
 async function init() {
   updateCartBadge();
   updateAuthBtn();
-  renderBestSellers();
-  renderHeroItems();
   updateDashboardVisibility();
-
-  if (user) {
-    updateProfileUI();
-    if (user.role === 'admin') document.getElementById('adminTopbar').style.display = 'block';
-  }
+  updateProfileUI();
 
   setTimeout(initCharts, 600);
 
-  // Load data from API
+  // Synchronize internal system data arrays
   await loadMenu();
   await loadConfig();
+  
   renderBestSellers();
   renderHeroItems();
 
-  // PWA Service Worker
+  // PWA Service Worker Client Injection Mount Point
   if ('serviceWorker' in navigator) {
     const swCode = `
 const CACHE='egoys-v2';
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['/']))));
 self.addEventListener('fetch',e=>e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match('/')))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));
-    `;
-    const swBlob = new Blob([swCode], { type: 'application/javascript' });
-    navigator.serviceWorker.register(URL.createObjectURL(swBlob)).catch(() => {});
+`;
+    const blob = new Blob([swCode], { type: 'application/javascript' });
+    const swUrl = URL.createObjectURL(blob);
+    navigator.serviceWorker.register(swUrl).catch(err => console.warn('PWA service worker registration bypassed or sandboxed:', err));
   }
 }
 
-init();
+window.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>
